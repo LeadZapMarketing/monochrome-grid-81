@@ -61,10 +61,10 @@ const HeroSlider = () => {
         className="absolute z-10 left-5 right-5 md:right-auto top-1/2 -translate-y-1/2 md:left-24 lg:left-32 xl:left-48 max-w-full md:max-w-3xl font-futura"
       >
         <p
-          className="text-sm sm:text-lg md:text-2xl lg:text-4xl mb-1 md:mb-2"
+          className="text-sm sm:text-lg md:text-3xl lg:text-5xl mb-1 md:mb-2"
           style={{ fontWeight: 150, color: "#ffffff", lineHeight: 1.2, letterSpacing: "0.02em", textShadow: "1px 2px 5px rgba(0,0,0,0.25)" }}
         >
-          Premier
+          Design - LED
         </p>
 
         {/* RESIDENTIAL ARCHITECT & */}
