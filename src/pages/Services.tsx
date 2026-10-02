@@ -57,6 +57,29 @@ const services = [
   },
 ];
 
+const faqs = [
+  {
+    question: "Is this a registered architect company in Malaysia?",
+    answer:
+      "Yes. The practice is led by Ar. Hidi Lau Wei Lin, a Registered Architect with Lembaga Arkitek Malaysia (LAM) and a Corporate Member of Pertubuhan Akitek Malaysia (PAM), and has been established since 1989.",
+  },
+  {
+    question: "Where in Malaysia does the practice work?",
+    answer:
+      "The office is in Taman Pelangi, Johor Bahru. The practice also accepts selected residential, hospitality and commercial projects elsewhere in Malaysia, including Kuala Lumpur, Selangor and Penang.",
+  },
+  {
+    question: "What kinds of projects does it take on?",
+    answer:
+      "Bespoke bungalows, semi-detached and link houses, renovations and structural extensions to landed homes, tropical resorts and hospitality venues, and commercial interiors.",
+  },
+  {
+    question: "Does it handle authority submissions?",
+    answer:
+      "Yes. As a LAM Registered Architect the practice prepares submission drawings and liaises with the relevant local councils, including MBJB and MBPJ, for new builds, structural extensions and modifications.",
+  },
+];
+
 const Services = () => {
   // Default to index 2 (Authority Submissions) to match the screenshot
   const [activeIndex, setActiveIndex] = useState<number>(2);
@@ -64,8 +87,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Interior Design and Build Malaysia | Service | Hidi Lau Architect | GET A INSTANT QUOTE NOW"
-        description="Architectural design, interior design, authority submissions and passionate craftsmanship. HIDI Lau Architect delivers excellence from concept to completion."
+        title="Architect Company in Malaysia | Hidi Lau Architect"
+        description="Hidi Lau Architect is a LAM-registered architect company in Malaysia, established 1989 in Johor Bahru. Architecture, interior design and authority submissions."
         path="/services/"
         schema={getServicesSchema()}
       />
@@ -108,6 +131,16 @@ const Services = () => {
 
           {/* Right: body copy */}
           <div className="px-10 py-12 flex flex-col justify-center gap-5">
+            <p
+              className="text-[14.5px] font-futura font-light leading-[1.85] text-foreground/75"
+            >
+              Hidi Lau Architect is an architect company in Malaysia, based in
+              Johor Bahru and established in 1989. The practice is led by Ar.
+              Hidi Lau Wei Lin, a Registered Architect with Lembaga Arkitek
+              Malaysia (LAM) and a Corporate Member of Pertubuhan Akitek
+              Malaysia (PAM), working on residential, hospitality and commercial
+              projects across Malaysia.
+            </p>
             <p
               className="text-[14.5px] font-futura font-light leading-[1.85] text-foreground/75"
             >
@@ -282,6 +315,45 @@ const Services = () => {
               </p>
             </Link>
           ))}
+        </div>
+
+        {/* ── Common questions ─────────────────────── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
+          {/* Left: heading */}
+          <div className="px-10 py-12 border-b md:border-b-0 md:border-r border-border flex flex-col justify-center">
+            <p
+              className="text-[12px] tracking-[0.45em] font-fiona uppercase text-muted-foreground/50 font-light mb-5"
+            >
+              Common Questions
+            </p>
+            <h2
+              className="text-[32px] md:text-[38px] font-fiona font-light leading-[1.2] tracking-[-0.01em] text-foreground"
+            >
+              Working with an
+              <br />
+              <em className="italic">architect company</em>
+              <br />
+              in Malaysia
+            </h2>
+          </div>
+
+          {/* Right: question and answer pairs */}
+          <div className="px-10 py-12 flex flex-col justify-center gap-7">
+            {faqs.map((faq) => (
+              <div key={faq.question}>
+                <h3
+                  className="text-[12px] font-fiona tracking-[0.28em] uppercase text-foreground font-normal mb-2.5"
+                >
+                  {faq.question}
+                </h3>
+                <p
+                  className="text-[12px] leading-[1.75] font-futura text-muted-foreground font-light"
+                >
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
       </main>
