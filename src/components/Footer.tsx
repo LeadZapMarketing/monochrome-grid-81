@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo3.png";
+import { trackLead } from "@/lib/leadEvents";
 
 const Footer = () => {
   return (
@@ -75,6 +76,7 @@ const Footer = () => {
                 href="tel:+60167442330"
                 className="hover:underline underline-offset-2"
                 onClick={() => {
+                  trackLead("phone_click", "footer_phone");
                   // 👇 Google Ads 拨打电话追踪逻辑
                   if (typeof window !== "undefined" && (window as any).gtag) {
                     (window as any).gtag("event", "conversion", {

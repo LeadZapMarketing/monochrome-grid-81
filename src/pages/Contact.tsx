@@ -10,6 +10,7 @@ import { z } from "zod";
 import SEO from "@/components/SEO";
 import heroImg from "@/Archive/Projects/courtyard-house_60.jpg";
 import { getContactSchema } from "@/lib/schema";
+import { trackLead } from "@/lib/leadEvents";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -115,6 +116,7 @@ const Contact = () => {
         // Google Ads conversion — only for genuinely saved (non-spam) leads,
         // so Ads conversion counts always match the lead sheet.
         const savedAsRealLead = data === null || (data.ok === true && data.spam !== true);
+        if (savedAsRealLead) trackLead("generate_lead", "contact_page_form");
         if (savedAsRealLead && typeof window !== "undefined" && (window as any).gtag) {
           (window as any).gtag("event", "conversion", {
             send_to: "AW-11342839562/aySGCNSJiqAcEIr-16Aq",
