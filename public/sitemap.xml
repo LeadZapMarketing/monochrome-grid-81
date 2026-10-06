@@ -86,22 +86,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://hidilauarchitect.com/project/chicha-san-chen/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://hidilauarchitect.com/project/winter-pavillion/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hidilauarchitect.com/project/founders-penang/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://hidilauarchitect.com/project/aor-house/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -112,6 +97,11 @@
   </url>
   <url>
     <loc>https://hidilauarchitect.com/project/beach-grill/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hidilauarchitect.com/project/kluang-resort-farmhouse/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

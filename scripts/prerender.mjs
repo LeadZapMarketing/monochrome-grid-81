@@ -25,12 +25,10 @@ const routes = [
   "/project/sutera-terrace/",
   "/project/indah-putra/",
   "/project/horizon-hills/",
-  "/project/chicha-san-chen/",
   "/project/winter-pavillion/",
-  "/project/founders-penang/",
-  "/project/aor-house/",
   "/project/langkawi-kitchen/",
   "/project/beach-grill/",
+  "/project/kluang-resort-farmhouse/",
 ];
 
 // Simple static file server for dist/
