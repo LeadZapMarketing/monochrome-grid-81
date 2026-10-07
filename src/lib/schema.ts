@@ -5,7 +5,7 @@ import { Project } from "@/data/projects";
 export const BUSINESS_INFO = {
   name: "HIDI Lau Architect",
   url: "https://hidilauarchitect.com/",
-  logo: "https://hidilauarchitect.com/assets/logo-CP_OYl3M.png",
+  logo: "https://hidilauarchitect.com/logo.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: "1, Jalan Biru 2, Taman Pelangi",
@@ -28,12 +28,11 @@ export const getHomeSchema = () => ({
       alternateName: ["HIDI Lau", "Hidi Lau Architect"],
       publisher: { "@id": `${BUSINESS_INFO.url}#organization` },
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": `${BUSINESS_INFO.url}#organization`,
-      ...BUSINESS_INFO,
-      url: `${BUSINESS_INFO.url}/`,
-    },
+    // The LocalBusiness #organization node is declared once, statically, in
+    // index.html so that every page carries it — including pages that pass no
+    // schema prop. Re-declaring it here gave the homepage two LocalBusiness
+    // nodes with conflicting logo URLs, so the WebSite node above simply
+    // references that single #organization by @id.
   ],
 });
 

@@ -10,7 +10,7 @@ interface SEOProps {
 }
 
 const SITE_URL = "https://hidilauarchitect.com";
-const DEFAULT_IMAGE = "https://hidilauarchitect.com/assets/logo-CP_OYl3M.png";
+const DEFAULT_IMAGE = "https://hidilauarchitect.com/logo.png";
 
 const SEO = ({ title, description, path, image, type = "website", schema }: SEOProps) => {
   // Normalize: strip any leading/trailing slashes from the page-supplied path,
