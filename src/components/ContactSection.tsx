@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { z } from "zod";
 import heroImg from "@/Archive/Projects/courtyard-house_60.jpg";
 import { trackLead } from "@/lib/leadEvents";
+import { lzEnquiry } from "@/lib/lzEnquiry";
 
 // 马来西亚州属列表
 const MALAYSIA_STATES = [
@@ -90,7 +91,7 @@ const ContactSection = () => {
       // Honeypot key renamed from "website" — browsers autofilled that name for
       // real visitors, causing the Apps Script to silently drop their leads.
       const payload = { ...result.data, submittedAt: submissionTime, hp_ref: honeypot };
-      const response = await fetch(
+      const send = fetch(
         "https://script.google.com/macros/s/AKfycbwcKMzmjXypCo3--xJHv-mrBAIXNQ7IfwCr1JF8PgI7t9FzEEzJEnqVonCnG7m9AObd/exec",
         {
           method: "POST",
@@ -98,6 +99,9 @@ const ContactSection = () => {
           body: JSON.stringify(payload),
         }
       );
+      // LeadZap backup copy, next to the form's own send (never instead of it).
+      lzEnquiry("contact_section", { ...result.data }, { hp: honeypot });
+      const response = await send;
 
       if (response.ok) {
         // Read the endpoint's JSON verdict — {ok, spam?} — so the Ads
