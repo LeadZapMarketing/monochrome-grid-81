@@ -14,8 +14,12 @@ const navItems = [
   { label: "Contact", href: "/contact/" },
 ];
 
+// The home page is not a menu item: "Projects" links to "/" but is never shown as the current page there.
+const isCurrentPath = (pathname: string, href: string) => href !== "/" && pathname === href;
+
 const Header = ({ transparent = false }: HeaderProps) => {
   const location = useLocation();
+  const isCurrent = (href: string) => isCurrentPath(location.pathname, href);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const useWhiteText = transparent;
@@ -44,7 +48,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
         {/* Desktop nav */}
         <nav className="hidden md:flex gap-8 items-center font-futura">
           {navItems.map((item) => {
-            const isActive = location.pathname === item.href;
+            const isActive = isCurrent(item.href);
             return (
               <Link
                 key={item.href}
@@ -95,7 +99,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
           {/* 菜单主体：建筑设计感的排版 */}
           <div className="flex-1 px-8 pt-16 flex flex-col gap-8">
             {navItems.map((item, index) => {
-              const isActive = location.pathname === item.href;
+              const isActive = isCurrent(item.href);
               return (
                 <Link
                   key={item.href}
