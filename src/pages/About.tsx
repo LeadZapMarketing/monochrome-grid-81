@@ -33,8 +33,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Top Architecture Firms in Malaysia | About Us | Hidi Lau Architect"
-        description="Meet Ar. Hidi Lau Wei Lir, principal architect at Hidi Lau Architect. Award-winning architectural and interior design studio established in 1989 in Johor Bahru."
+        title="Top Architect Firm in Malaysia | About Hidi Lau Architect"
+        description="Meet Ar. Hidi Lau Wei Lin, LAM-registered principal of Hidi Lau Architect, an award-winning architecture and interior design firm in Johor Bahru, Malaysia."
         path="/about/"
         schema={getAboutSchema()} // 2. 这里传入动态生成的 Schema
       />

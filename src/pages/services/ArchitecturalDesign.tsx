@@ -30,7 +30,7 @@ const ArchitecturalDesign = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Architectural Design That Brings Your Ideas to Life | Hidi Lau Architect"
+        title="Architectural Design Services Malaysia | Hidi Lau Architect"
         description="Our architectural design service focuses on creating spaces that are functional, elegant, and deeply connected to the needs of each client."
         path="/services/architectural-design/"
         schema={getArchitecturalDesignSchema()}

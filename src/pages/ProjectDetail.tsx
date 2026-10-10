@@ -18,6 +18,12 @@ const getCategoryLabel = (category: string) => {
   }
 };
 
+// Keep titles within 60 characters: drop the category when it would overflow.
+const projectTitle = (title: string, category: string) => {
+  const full = `${title} | ${category} | Hidi Lau Architect`;
+  return full.length <= 60 ? full : `${title} | Hidi Lau Architect`;
+};
+
 const SITE_URL = "https://hidilauarchitect.com";
 
 const ProjectDetail = () => {
@@ -62,7 +68,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title={`${project.title} | ${getCategoryLabel(project.category)} | Hidi Lau Architect`}
+        title={projectTitle(project.title, getCategoryLabel(project.category))}
         description={project.description || `${project.title} — ${project.category} project by Hidi Lau Architect, Johor Bahru.`}
         path={`/project/${project.id}`}
         image={project.cover}

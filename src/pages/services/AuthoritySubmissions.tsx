@@ -30,7 +30,7 @@ const AuthoritySubmissions = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title=" Simplifying Interior Architecture and Approval Processes | Hidi Lau Architect"
+        title="Authority Submissions & Approvals | Hidi Lau Architect"
         description="Our authority submission service helps clients manage the technical and administrative side of architectural projects with professionalism and accuracy."
         path="/services/authority-submissions/"
         schema={getAuthoritySubmissionsSchema()}

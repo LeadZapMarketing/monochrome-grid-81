@@ -29,7 +29,7 @@ const PassionateCraftsmanship = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Detail Design Architecture That Brings Spaces to Life | Hidi Lau Architect"
+        title="Detail Design & Craftsmanship | Hidi Lau Architect"
         description="Our passionate craftsmanship approach reflects our commitment to quality, precision, and thoughtful execution across every project."
         path="/services/craftsmanship/"
         schema={getPassionateCraftsmanshipSchema()}
