@@ -86,7 +86,7 @@ async function prerender() {
     const url = `http://localhost:${PORT}${route}`;
     console.log(`Rendering: ${route}`);
 
-    await page.goto(url, { waitUntil: "networkidle0", timeout: 30000 });
+    await page.goto(url, { waitUntil: "networkidle2", timeout: 90000 });
 
     // Wait a bit for any animations/lazy content
     await new Promise((r) => setTimeout(r, 1000));
