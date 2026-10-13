@@ -7,6 +7,56 @@ import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { BlogPost } from "@/types/blog";
 
+// A closing paragraph per post that links readers on to the page that answers their next question.
+type NextStepLink = { to: string; label: string };
+type NextStep = { lead: string; links: NextStepLink[] };
+
+const NEXT_STEPS: Record<string, NextStep> = {
+  "hiring-an-architect-in-johor-bahru": {
+    lead: "Planning a home or renovation in Johor Bahru? See how we take a project from brief to approval in our",
+    links: [
+      { to: "/services/architectural-design/", label: "architectural design service" },
+      { to: "/contact/", label: "talk to an architect in Johor Bahru" },
+    ],
+  },
+  "architecture-in-johor-bahru": {
+    lead: "Want a tropical home that stays cool without relying on air-conditioning? Read about our",
+    links: [
+      { to: "/services/architectural-design/", label: "architectural design service" },
+      { to: "/contact/", label: "arrange a consultation for your site" },
+    ],
+  },
+  "architecture-and-interior-design-planning": {
+    lead: "We plan the building and its interiors as one project. Learn more about our",
+    links: [
+      { to: "/services/interior-design/", label: "interior design service" },
+      { to: "/contact/", label: "discuss your project with us" },
+    ],
+  },
+  "design-and-build-your-dream-house": {
+    lead: "Ready to move from concept to completion? Explore our",
+    links: [
+      { to: "/services/", label: "architecture and interior design services" },
+      { to: "/contact/", label: "start your project with an enquiry" },
+    ],
+  },
+  "pam-member-in-architect-industry": {
+    lead: "Hidi Lau is a LAM-registered architect and PAM member. Read",
+    links: [
+      { to: "/about/", label: "about our practice and credentials" },
+      { to: "/contact/", label: "speak to a registered architect" },
+    ],
+  },
+};
+
+const DEFAULT_NEXT_STEP: NextStep = {
+  lead: "Thinking about your own project? Explore our",
+  links: [
+    { to: "/services/", label: "architecture and interior design services" },
+    { to: "/contact/", label: "get in touch with our studio" },
+  ],
+};
+
 const BlogDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<BlogPost | null>(null);
@@ -161,6 +211,22 @@ const BlogDetail = () => {
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           )}
+          {(() => {
+            const next = NEXT_STEPS[post.slug || ""] || DEFAULT_NEXT_STEP;
+            return (
+              <p className="mt-12 pt-8 border-t border-border text-xs leading-8 text-muted-foreground font-light">
+                {next.lead}{" "}
+                <Link to={next.links[0].to} className="text-foreground underline underline-offset-4">
+                  {next.links[0].label}
+                </Link>
+                , or{" "}
+                <Link to={next.links[1].to} className="text-foreground underline underline-offset-4">
+                  {next.links[1].label}
+                </Link>
+                .
+              </p>
+            );
+          })()}
         </div>
 
         {/* Back to blog */}
