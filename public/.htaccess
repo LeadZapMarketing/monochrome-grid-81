@@ -18,6 +18,10 @@ RewriteRule ^ - [L]
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+)$ /$1/index.html [L]
 
+# Prerendered pages without a trailing slash (blog posts: /blog/<slug> -> /blog/<slug>.html)
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)$ /$1.html [L]
+
 # SPA fallback — serve index.html for all other routes
 RewriteRule ^ /index.html [L]
 

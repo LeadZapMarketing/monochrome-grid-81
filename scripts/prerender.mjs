@@ -29,6 +29,14 @@ const routes = [
   "/project/langkawi-kitchen/",
   "/project/beach-grill/",
   "/project/kluang-resort-farmhouse/",
+  // Journal. Posts have no trailing slash: they are saved as dist/blog/<slug>.html
+  // (see .htaccess), so a directory never forces a redirect to /blog/<slug>/.
+  "/blog/",
+  "/blog/hiring-an-architect-in-johor-bahru",
+  "/blog/design-and-build-your-dream-house",
+  "/blog/architecture-and-interior-design-planning",
+  "/blog/architecture-in-johor-bahru",
+  "/blog/pam-member-in-architect-industry",
 ];
 
 // Simple static file server for dist/
@@ -91,6 +99,19 @@ async function prerender() {
     // Wait a bit for any animations/lazy content
     await new Promise((r) => setTimeout(r, 1000));
 
+    // Journal pages load their posts from Supabase: wait for the loading skeleton to go.
+    // If it never does, skip the page so it keeps the SPA fallback instead of a skeleton.
+    if (route.startsWith("/blog/")) {
+      const loaded = await page
+        .waitForFunction(() => !document.querySelector("main .animate-pulse"), { timeout: 30000 })
+        .then(() => true, () => false);
+      if (!loaded) {
+        console.warn(`  ! Skipped ${route}: posts did not load`);
+        await page.close();
+        continue;
+      }
+    }
+
     /*
      * Strip portal-rendered floating widgets before saving.
      *
@@ -122,10 +143,12 @@ async function prerender() {
     const html = await page.content();
 
     // Determine output path
-    const outDir = route === "/" ? DIST : join(DIST, route);
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, "index.html"), html);
-    console.log(`  → Saved: ${join(outDir, "index.html")}`);
+    const outFile = route.endsWith("/")
+      ? join(route === "/" ? DIST : join(DIST, route), "index.html")
+      : join(DIST, `${route}.html`);
+    mkdirSync(dirname(outFile), { recursive: true });
+    writeFileSync(outFile, html);
+    console.log(`  → Saved: ${outFile}`);
 
     await page.close();
   }

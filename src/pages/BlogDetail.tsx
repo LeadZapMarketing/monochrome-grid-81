@@ -129,6 +129,7 @@ const BlogDetail = () => {
         title={`${post.title} | HIDI Lau Architect`}
         description={post.excerpt || `${post.title} — HIDI Lau Architect Journal`}
         path={`/blog/${post.slug || post.id}`}
+        trailingSlash={false}
         image={post.image}
         type="article"
       />
