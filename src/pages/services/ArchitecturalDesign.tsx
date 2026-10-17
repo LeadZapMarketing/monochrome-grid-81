@@ -33,6 +33,10 @@ const ArchitecturalDesign = () => {
         title="Architectural Design Services Malaysia | Hidi Lau Architect"
         description="Our architectural design service focuses on creating spaces that are functional, elegant, and deeply connected to the needs of each client."
         path="/services/architectural-design/"
+        breadcrumbs={[
+          { name: "Services", path: "/services/" },
+          { name: "Architectural Design", path: "/services/architectural-design/" },
+        ]}
         schema={getArchitecturalDesignSchema()}
 
       />

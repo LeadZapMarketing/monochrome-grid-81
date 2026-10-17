@@ -1,5 +1,6 @@
 // src/lib/schema.ts
 import { Project } from "@/data/projects";
+import { faqData } from "@/components/FAQSection";
 
 // ─── 1. 基础公司信息（单一样本源）────────────────────────────────────────────
 export const BUSINESS_INFO = {
@@ -23,7 +24,7 @@ export const getHomeSchema = () => ({
     {
       "@type": "WebSite",
       "@id": `${BUSINESS_INFO.url}#website`,
-      url: `${BUSINESS_INFO.url}/`,
+      url: BUSINESS_INFO.url,
       name: "HIDI Lau Architect",
       alternateName: ["HIDI Lau", "Hidi Lau Architect"],
       publisher: { "@id": `${BUSINESS_INFO.url}#organization` },
@@ -33,6 +34,16 @@ export const getHomeSchema = () => ({
     // schema prop. Re-declaring it here gave the homepage two LocalBusiness
     // nodes with conflicting logo URLs, so the WebSite node above simply
     // references that single #organization by @id.
+    {
+      // Mirrors the FAQ section shown on the homepage (same questions and answers).
+      "@type": "FAQPage",
+      "@id": `${BUSINESS_INFO.url}#faq`,
+      mainEntity: faqData.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
   ],
 });
 
@@ -83,13 +94,6 @@ export const getServicesSchema = () => ({
       name: "Architectural and Interior Design Services | HIDI Lau Architect",
       description:
         "Comprehensive architectural solutions, interior design, authority submissions and passionate craftsmanship in Johor Bahru.",
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${BUSINESS_INFO.url}services/` },
-        ],
-      },
     },
     {
       "@type": "LocalBusiness",
@@ -186,14 +190,6 @@ export const getArchitecturalDesignSchema = () => ({
           itemOffered: { "@type": "Service", name: step },
         })),
       },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${BUSINESS_INFO.url}services/` },
-          { "@type": "ListItem", position: 3, name: "Architectural Design", item: `${BUSINESS_INFO.url}services/architectural-design/` },
-        ],
-      },
     },
   ],
 });
@@ -238,14 +234,6 @@ export const getInteriorDesignSchema = () => ({
           position: i + 1,
           itemOffered: { "@type": "Service", name: step },
         })),
-      },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${BUSINESS_INFO.url}services/` },
-          { "@type": "ListItem", position: 3, name: "Interior Design", item: `${BUSINESS_INFO.url}services/interior-design/` },
-        ],
       },
     },
   ],
@@ -292,14 +280,6 @@ export const getAuthoritySubmissionsSchema = () => ({
           itemOffered: { "@type": "Service", name: step },
         })),
       },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${BUSINESS_INFO.url}services/` },
-          { "@type": "ListItem", position: 3, name: "Authority Submissions", item: `${BUSINESS_INFO.url}services/authority-submissions/` },
-        ],
-      },
     },
   ],
 });
@@ -344,14 +324,6 @@ export const getPassionateCraftsmanshipSchema = () => ({
           itemOffered: { "@type": "Service", name: step },
         })),
       },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Services", item: `${BUSINESS_INFO.url}services/` },
-          { "@type": "ListItem", position: 3, name: "Passionate Craftsmanship", item: `${BUSINESS_INFO.url}services/craftsmanship/` },
-        ],
-      },
     },
   ],
 });
@@ -384,13 +356,6 @@ export const getContactSchema = () => ({
             telephone: "+607-3391199",
             contactType: "office",
           },
-        ],
-      },
-      breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS_INFO.url },
-          { "@type": "ListItem", position: 2, name: "Contact", item: `${BUSINESS_INFO.url}contact/` },
         ],
       },
     },

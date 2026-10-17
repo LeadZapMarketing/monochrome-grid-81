@@ -78,6 +78,7 @@ const Blog = () => {
         title="Journal | HIDI Lau Architect"
         description="Insights on architecture, interior design and the stories behind our projects. Written by HIDI Lau Architect, Johor Bahru."
         path="/blog"
+        breadcrumbs={[{ name: "Journal", path: "/blog/" }]}
       />
       <Header />
       <main className="flex-1">

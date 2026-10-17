@@ -8,18 +8,33 @@ interface SEOProps {
   type?: string;
   schema?: object;  // ← 加这个
   trailingSlash?: boolean; // false for blog posts: they live at /blog/<slug>, no slash
+  // Trail below Home, ending with this page, e.g. [{ name: "Services", path: "/services/" }].
+  // Paths are written exactly as their canonical URLs (with or without the trailing slash).
+  breadcrumbs?: { name: string; path: string }[];
 }
 
 const SITE_URL = "https://hidilauarchitect.com";
 const DEFAULT_IMAGE = "https://hidilauarchitect.com/logo.png";
 
-const SEO = ({ title, description, path, image, type = "website", schema, trailingSlash = true }: SEOProps) => {
+const SEO = ({ title, description, path, image, type = "website", schema, trailingSlash = true, breadcrumbs }: SEOProps) => {
   // Normalize: strip any leading/trailing slashes from the page-supplied path,
   // then build a single, canonical trailing-slash URL. Prevents "//" (when path
   // already ends in "/") and a missing slash (when it doesn't).
   const cleanPath = path ? path.replace(/^\/+|\/+$/g, "") : "";
   const url = cleanPath ? `${SITE_URL}/${cleanPath}${trailingSlash ? "/" : ""}` : `${SITE_URL}/`;
   const img = image || DEFAULT_IMAGE;
+  const breadcrumbSchema = breadcrumbs?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [{ name: "Home", path: "/" }, ...breadcrumbs].map((crumb, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: crumb.name,
+          item: `${SITE_URL}${crumb.path}`,
+        })),
+      }
+    : null;
 
   return (
     <Helmet>
@@ -41,6 +56,11 @@ const SEO = ({ title, description, path, image, type = "website", schema, traili
       {schema && (
         <script type="application/ld+json">
           {JSON.stringify(schema)}
+        </script>
+      )}
+      {breadcrumbSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
         </script>
       )}
     </Helmet>

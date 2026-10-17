@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
-const faqData = [
+export const faqData = [
   {
     question: "Do You need an Architect or Interior Designer?",
     answer: "An architect handles the overall structural layout, building envelope, spatial planning, and authority compliance, while an interior designer focuses on internal aesthetics, custom joinery, and fit-outs. At Hidi Lau Architect, we bridge both worlds, offering comprehensive design that integrates architectural form seamlessly with bespoke interior spaces."

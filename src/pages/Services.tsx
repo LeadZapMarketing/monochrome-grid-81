@@ -90,6 +90,7 @@ const Services = () => {
         title="Architect Company in Malaysia | Hidi Lau Architect"
         description="Hidi Lau Architect is a LAM-registered architect company in Malaysia, established 1989 in Johor Bahru. Architecture, interior design and authority submissions."
         path="/services/"
+        breadcrumbs={[{ name: "Services", path: "/services/" }]}
         schema={getServicesSchema()}
       />
       <Header />

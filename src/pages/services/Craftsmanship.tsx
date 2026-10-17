@@ -32,6 +32,10 @@ const PassionateCraftsmanship = () => {
         title="Detail Design & Craftsmanship | Hidi Lau Architect"
         description="Our passionate craftsmanship approach reflects our commitment to quality, precision, and thoughtful execution across every project."
         path="/services/craftsmanship/"
+        breadcrumbs={[
+          { name: "Services", path: "/services/" },
+          { name: "Passionate Craftsmanship", path: "/services/craftsmanship/" },
+        ]}
         schema={getPassionateCraftsmanshipSchema()}
       />
       <Header />

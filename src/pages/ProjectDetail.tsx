@@ -71,6 +71,7 @@ const ProjectDetail = () => {
         title={projectTitle(project.title, getCategoryLabel(project.category))}
         description={project.description || `${project.title} — ${project.category} project by Hidi Lau Architect, Johor Bahru.`}
         path={`/project/${project.id}`}
+        breadcrumbs={[{ name: project.title, path: `/project/${project.id}/` }]}
         image={project.cover}
         type="article"
         schema={getProjectDetailSchema(project)} />

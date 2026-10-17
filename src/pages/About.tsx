@@ -36,6 +36,7 @@ const About = () => {
         title="Top Architect Firm in Malaysia | About Hidi Lau Architect"
         description="Meet Ar. Hidi Lau Wei Lin, LAM-registered principal of Hidi Lau Architect, an award-winning architecture and interior design firm in Johor Bahru, Malaysia."
         path="/about/"
+        breadcrumbs={[{ name: "About", path: "/about/" }]}
         schema={getAboutSchema()} // 2. 这里传入动态生成的 Schema
       />
       <Header />

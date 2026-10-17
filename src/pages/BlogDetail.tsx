@@ -130,6 +130,10 @@ const BlogDetail = () => {
         description={post.excerpt || `${post.title} — HIDI Lau Architect Journal`}
         path={`/blog/${post.slug || post.id}`}
         trailingSlash={false}
+        breadcrumbs={[
+          { name: "Journal", path: "/blog/" },
+          { name: post.title, path: `/blog/${post.slug || post.id}` },
+        ]}
         image={post.image}
         type="article"
       />

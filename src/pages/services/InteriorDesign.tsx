@@ -33,6 +33,10 @@ const InteriorDesign = () => {
         title="Interior Design Malaysia for Homes | Hidi Lau Architect"
         description="Our interior design service focuses on creating interiors that are visually refined, comfortable, and practical for everyday living or working."
         path="/services/interior-design/"
+        breadcrumbs={[
+          { name: "Services", path: "/services/" },
+          { name: "Interior Design", path: "/services/interior-design/" },
+        ]}
         schema={getInteriorDesignSchema()}
 
       />

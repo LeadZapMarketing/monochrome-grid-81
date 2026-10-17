@@ -33,6 +33,10 @@ const AuthoritySubmissions = () => {
         title="Authority Submissions & Approvals | Hidi Lau Architect"
         description="Our authority submission service helps clients manage the technical and administrative side of architectural projects with professionalism and accuracy."
         path="/services/authority-submissions/"
+        breadcrumbs={[
+          { name: "Services", path: "/services/" },
+          { name: "Authority Submissions", path: "/services/authority-submissions/" },
+        ]}
         schema={getAuthoritySubmissionsSchema()}
 
       />
