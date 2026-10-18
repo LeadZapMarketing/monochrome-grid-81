@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
-import { BlogPost } from "@/types/blog";
+import { BlogPost, getPostDate } from "@/types/blog";
 
 const POSTS_PER_PAGE = 6;
 
@@ -24,6 +24,8 @@ const Blog = () => {
         .order("publishedAt", { ascending: false });
 
       if (!error && data) {
+        // Newest first by the date shown on each post (publishedAt is empty on every row).
+        data.sort((a: BlogPost, b: BlogPost) => (getPostDate(b) || "").localeCompare(getPostDate(a) || ""));
         setPosts(data);
 
         const tagSet = new Set<string>();
@@ -169,14 +171,15 @@ const Blog = () => {
                         {post.tags.split(",")[0].trim()}
                       </span>
                     )}
-                    {post.publishedAt && (
-                      <span className="text-[9px] tracking-[0.2em] text-muted-foreground">
-                        {new Date(post.publishedAt).toLocaleDateString("en-GB", {
+                    {getPostDate(post) && (
+                      <time dateTime={getPostDate(post)} className="text-[9px] tracking-[0.2em] text-muted-foreground">
+                        {new Date(getPostDate(post)!).toLocaleDateString("en-GB", {
                           day: "numeric",
                           month: "short",
                           year: "numeric",
+                          timeZone: "Asia/Kuala_Lumpur",
                         })}
-                      </span>
+                      </time>
                     )}
                   </div>
 

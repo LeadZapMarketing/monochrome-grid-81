@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
-import { BlogPost } from "@/types/blog";
+import { BlogPost, getPostDate, getPostModified } from "@/types/blog";
+import { getBlogPostingSchema } from "@/lib/schema";
 
 // A closing paragraph per post that links readers on to the page that answers their next question.
 type NextStepLink = { to: string; label: string };
@@ -123,12 +124,24 @@ const BlogDetail = () => {
     );
   }
 
+  const postDate = getPostDate(post);
+  const description = post.excerpt || `${post.title} — HIDI Lau Architect Journal`;
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title={`${post.title} | HIDI Lau Architect`}
-        description={post.excerpt || `${post.title} — HIDI Lau Architect Journal`}
+        description={description}
         path={`/blog/${post.slug || post.id}`}
+        schema={getBlogPostingSchema({
+          title: post.title || "",
+          description,
+          url: `https://hidilauarchitect.com/blog/${post.slug || post.id}`,
+          image: post.image,
+          author: post.author,
+          datePublished: postDate,
+          dateModified: getPostModified(post),
+        })}
         trailingSlash={false}
         breadcrumbs={[
           { name: "Journal", path: "/blog/" },
@@ -149,14 +162,15 @@ const BlogDetail = () => {
                     {post.tags.split(",")[0].trim()}
                   </span>
                 )}
-                {post.publishedAt && (
-                  <span className="text-[9px] tracking-[0.2em] text-muted-foreground">
-                    {new Date(post.publishedAt).toLocaleDateString("en-GB", {
+                {postDate && (
+                  <time dateTime={postDate} className="text-[9px] tracking-[0.2em] text-muted-foreground">
+                    {new Date(postDate).toLocaleDateString("en-GB", {
                       day: "numeric",
                       month: "long",
                       year: "numeric",
+                      timeZone: "Asia/Kuala_Lumpur",
                     })}
-                  </span>
+                  </time>
                 )}
               </div>
               <h1 className="text-xl md:text-2xl tracking-[0.12em] uppercase font-light text-foreground leading-relaxed">

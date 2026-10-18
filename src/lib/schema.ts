@@ -457,3 +457,25 @@ export const getProjectSchema = (project: {
     },
   ],
 });
+// ─── 13. Blog post ───────────────────────────────────────────────────────────
+export const getBlogPostingSchema = (post: {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  author?: string;
+  datePublished?: string;
+  dateModified?: string;
+}) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: post.description,
+  url: post.url,
+  mainEntityOfPage: post.url,
+  ...(post.image && { image: post.image }),
+  ...(post.datePublished && { datePublished: post.datePublished }),
+  ...(post.dateModified && { dateModified: post.dateModified }),
+  author: { "@type": "Person", name: post.author || "Hidi Lau" },
+  publisher: { "@type": "Organization", "@id": `${BUSINESS_INFO.url}#organization`, name: BUSINESS_INFO.name, logo: BUSINESS_INFO.logo },
+});
