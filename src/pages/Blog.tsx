@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { BlogPost, getPostDate } from "@/types/blog";
+import { LOCAL_GUIDES } from "@/data/guides";
 
 const POSTS_PER_PAGE = 6;
 
@@ -18,12 +19,13 @@ const Blog = () => {
 
   useEffect(() => {
     const fetchAll = async () => {
-      const { data, error } = await supabase
+      let { data, error } = await supabase
         .from("HidiLauTable")
         .select("*")
         .order("publishedAt", { ascending: false });
 
       if (!error && data) {
+        data = [...LOCAL_GUIDES, ...data];
         // Newest first by the date shown on each post (publishedAt is empty on every row).
         data.sort((a: BlogPost, b: BlogPost) => (getPostDate(b) || "").localeCompare(getPostDate(a) || ""));
         setPosts(data);

@@ -11,6 +11,7 @@ export interface BlogPost {
     title?: string;
     featured?: boolean;
     slug?: string;
+    seoTitle?: string; // <title> when the headline is too long for search results
   }
   
   export type BlogCategory = "All" | "设计知识" | "项目故事";

@@ -2,51 +2,21 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { trackWhatsAppClick, WHATSAPP_LINK } from "@/lib/whatsapp";
 
 export default function WhatsAppChatWidget() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
 
-  // 使用短链接格式，逻辑完全一致，且更加简洁
-  const phone = "60167442330";
-  const message = "Hi, I would like to know more about your services.";
-  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-
-  const handleTrackConversion = () => {
-    if (typeof window === "undefined") return;
-
-    // Google Ads Conversion Tracking
-    if ((window as any).gtag) {
-      (window as any).gtag("event", "conversion", {
-        send_to: "AW-11342839562/aySGCNSJiqAcEIr-16Aq",
-      });
-
-      // GA4 engagement event — the console counts on this exact event name
-      (window as any).gtag("event", "whatsapp_click", {
-        event_category: "engagement",
-        event_label: "whatsapp_button",
-      });
-    }
-
-    // GTM path, in case gtag.js is blocked or tags are managed in GTM
-    if (Array.isArray((window as any).dataLayer)) {
-      (window as any).dataLayer.push({
-        event: "whatsapp_click",
-        event_category: "engagement",
-        event_label: "whatsapp_button",
-      });
-    }
-  };
-
   if (!mounted) return null;
 
   return createPortal(
     <a
-      href={whatsappLink}
+      href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={handleTrackConversion}
+      onClick={trackWhatsAppClick}
       className="fixed bottom-5 right-5 z-[9999] h-14 w-14 rounded-full bg-[#25D366] text-white shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-200"
       aria-label="Contact us on WhatsApp"
     >

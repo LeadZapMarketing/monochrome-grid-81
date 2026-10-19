@@ -37,6 +37,7 @@ const routes = [
   "/blog/architecture-and-interior-design-planning",
   "/blog/architecture-in-johor-bahru",
   "/blog/pam-member-in-architect-industry",
+  "/blog/certificate-of-completion-and-compliance-malaysia",
 ];
 
 // Simple static file server for dist/

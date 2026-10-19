@@ -7,6 +7,8 @@ import SEO from "@/components/SEO";
 import { supabase } from "@/lib/supabase";
 import { BlogPost, getPostDate, getPostModified } from "@/types/blog";
 import { getBlogPostingSchema } from "@/lib/schema";
+import { getLocalGuide } from "@/data/guides";
+import { trackWhatsAppClick, WHATSAPP_LINK } from "@/lib/whatsapp";
 
 // A closing paragraph per post that links readers on to the page that answers their next question.
 type NextStepLink = { to: string; label: string };
@@ -41,6 +43,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "start your project with an enquiry" },
     ],
   },
+  "certificate-of-completion-and-compliance-malaysia": {
+    lead: "Building your own home and want the plans, approvals and CCC handled by a registered architect? See our",
+    links: [
+      { to: "/services/authority-submissions/", label: "authority submissions service" },
+      { to: "/contact/", label: "ask us about your project" },
+    ],
+  },
   "pam-member-in-architect-industry": {
     lead: "Hidi Lau is a LAM-registered architect and PAM member. Read",
     links: [
@@ -60,10 +69,18 @@ const DEFAULT_NEXT_STEP: NextStep = {
 
 const BlogDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+  const localGuide = getLocalGuide(slug);
+  const [post, setPost] = useState<BlogPost | null>(localGuide || null);
+  const [loading, setLoading] = useState(!localGuide);
 
   useEffect(() => {
+    const guide = getLocalGuide(slug);
+    if (guide) {
+      setPost(guide);
+      setLoading(false);
+      return;
+    }
+
     const fetchPost = async () => {
       setLoading(true);
 
@@ -126,18 +143,20 @@ const BlogDetail = () => {
 
   const postDate = getPostDate(post);
   const description = post.excerpt || `${post.title} — HIDI Lau Architect Journal`;
+  // Repo guides import their cover from the build, so it comes as a root-relative path.
+  const image = post.image?.startsWith("/") ? `https://hidilauarchitect.com${post.image}` : post.image;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title={`${post.title} | HIDI Lau Architect`}
+        title={post.seoTitle || `${post.title} | HIDI Lau Architect`}
         description={description}
         path={`/blog/${post.slug || post.id}`}
         schema={getBlogPostingSchema({
           title: post.title || "",
           description,
           url: `https://hidilauarchitect.com/blog/${post.slug || post.id}`,
-          image: post.image,
+          image,
           author: post.author,
           datePublished: postDate,
           dateModified: getPostModified(post),
@@ -147,7 +166,7 @@ const BlogDetail = () => {
           { name: "Journal", path: "/blog/" },
           { name: post.title, path: `/blog/${post.slug || post.id}` },
         ]}
-        image={post.image}
+        image={image}
         type="article"
       />
       <Header />
@@ -246,6 +265,18 @@ const BlogDetail = () => {
               </p>
             );
           })()}
+          {localGuide && (
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={trackWhatsAppClick}
+              className="mt-8 inline-flex items-center gap-3 border border-foreground px-6 py-3 text-[10px] tracking-[0.25em] uppercase text-foreground hover:bg-foreground hover:text-background transition-colors duration-300"
+            >
+              WhatsApp our architect
+              <ArrowUpRight size={12} />
+            </a>
+          )}
         </div>
 
         {/* Back to blog */}
