@@ -114,9 +114,17 @@ async function prerender() {
     // Journal pages load their posts from Supabase: wait for the loading skeleton to go.
     // If it never does, skip the page so it keeps the SPA fallback instead of a skeleton.
     if (route.startsWith("/blog/")) {
-      const loaded = await page
-        .waitForFunction(() => !document.querySelector("main .animate-pulse"), { timeout: 30000 })
-        .then(() => true, () => false);
+      const postsLoaded = () =>
+        page
+          .waitForFunction(() => !document.querySelector("main .animate-pulse"), { timeout: 45000 })
+          .then(() => true, () => false);
+      let loaded = await postsLoaded();
+      // Supabase is sometimes slow on the build machine: reload once before giving up.
+      if (!loaded) {
+        console.warn(`  ! ${route}: posts slow, reloading once`);
+        await page.reload({ waitUntil: "load", timeout: 60000 }).catch(() => {});
+        loaded = await postsLoaded();
+      }
       if (!loaded) {
         console.warn(`  ! Skipped ${route}: posts did not load`);
         await page.close();
