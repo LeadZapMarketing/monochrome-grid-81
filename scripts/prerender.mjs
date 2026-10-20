@@ -82,7 +82,7 @@ function startServer(port) {
 
 async function prerender() {
   console.log("Starting prerender...");
-  const PORT = 4173;
+  const PORT = Number(process.env.PRERENDER_PORT) || 4173;
   const server = await startServer(PORT);
 
   const browser = await puppeteer.launch({
@@ -95,7 +95,18 @@ async function prerender() {
     const url = `http://localhost:${PORT}${route}`;
     console.log(`Rendering: ${route}`);
 
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 90000 });
+    // A tag that keeps the network busy (Tag Manager, a slow image) must not fail
+    // the whole build: if the page never goes quiet, keep it once it has rendered.
+    try {
+      await page.goto(url, { waitUntil: "networkidle2", timeout: 60000 });
+    } catch (err) {
+      if (err?.name !== "TimeoutError") throw err;
+      const rendered = await page
+        .waitForFunction(() => document.getElementById("root")?.children.length > 0, { timeout: 30000 })
+        .then(() => true, () => false);
+      if (!rendered) throw err;
+      console.warn(`  ! ${route}: network never went quiet; saved once rendered`);
+    }
 
     // Wait a bit for any animations/lazy content
     await new Promise((r) => setTimeout(r, 1000));
