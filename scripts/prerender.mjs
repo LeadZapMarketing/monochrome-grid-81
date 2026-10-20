@@ -141,6 +141,14 @@ async function prerender() {
         .forEach((el) => (el.closest('body > *') || el).remove());
     });
 
+    // The Tag Manager snippet in index.html adds its own gtm.js tag when it runs.
+    // Drop the copy it added during the render, or every visit downloads it twice.
+    await page.evaluate(() => {
+      document
+        .querySelectorAll('script[src*="googletagmanager.com/gtm.js"]')
+        .forEach((el) => el.remove());
+    });
+
     const html = await page.content();
 
     // Determine output path

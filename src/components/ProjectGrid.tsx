@@ -105,9 +105,8 @@ const ProjectTile = ({
           alt={project.title}
           width={600}
           height={400}
-          loading={index < 3 ? "eager" : "lazy"}
+          loading="lazy"
           decoding="async"
-          fetchPriority={index < 3 ? "high" : "low"}
           style={{
             position: "absolute", inset: 0, width: "100%", height: "100%",
             objectFit: "cover", zIndex: 2, transform: "translateX(0)",

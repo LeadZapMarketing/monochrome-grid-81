@@ -11,7 +11,7 @@ const ResidentialFeature = () => {
             src={featureImg}
             alt="Architectural Design"
             className="w-full h-auto object-cover"
-            fetchPriority="high"
+            loading="lazy"
             decoding="async"
             width="901"
             height="507"

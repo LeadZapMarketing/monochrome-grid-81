@@ -7,19 +7,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ProjectDetail from "./pages/ProjectDetail";
-import Contact from "./pages/Contact";
-import BlogPost from "./pages/Blog";
-import BlogDetail from "./pages/BlogDetail";
-import NotFound from "./pages/NotFound";
+// Every page but the homepage loads its own code when visited, so the homepage
+// downloads only what it needs. main.tsx renders in a transition with no boundary
+// around the routes, so the prerendered page stays on screen until that code arrives.
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const Contact = lazy(() => import("./pages/Contact"));
+const BlogPost = lazy(() => import("./pages/Blog"));
+const BlogDetail = lazy(() => import("./pages/BlogDetail"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 const WhatsAppChatWidget = lazy(() => import("./components/WhatsAppChatWidget"));
-import Blog from "./pages/Blog";
-import ArchitecturalDesign from "./pages/services/ArchitecturalDesign";
-import InteriorDesign from "./pages/services/InteriorDesign";
-import AuthoritySubmissions from "./pages/services/AuthoritySubmissions";
-import PassionateCraftsmanship from "./pages/services/Craftsmanship";
+const ArchitecturalDesign = lazy(() => import("./pages/services/ArchitecturalDesign"));
+const InteriorDesign = lazy(() => import("./pages/services/InteriorDesign"));
+const AuthoritySubmissions = lazy(() => import("./pages/services/AuthoritySubmissions"));
+const PassionateCraftsmanship = lazy(() => import("./pages/services/Craftsmanship"));
 
 
 const queryClient = new QueryClient();
