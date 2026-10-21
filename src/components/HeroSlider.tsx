@@ -3,7 +3,9 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [mounted, setMounted] = useState<Set<number>>(() => new Set([0, 1]));
+  // Only the first slide is in the page at load, so the first photo gets the whole
+  // connection on phones; the next slide joins 1 s before it fades in.
+  const [mounted, setMounted] = useState<Set<number>>(() => new Set([0]));
 
   const slides = Array.from({ length: 11 }, (_, i) => `/images/hero/${i + 1}.webp`);
 
@@ -25,12 +27,11 @@ const HeroSlider = () => {
   }, [slides.length]);
 
   useEffect(() => {
-    setMounted((prev) => {
-      const next = new Set(prev);
-      next.add(current);
-      next.add((current + 1) % slides.length);
-      return next;
-    });
+    setMounted((prev) => (prev.has(current) ? prev : new Set(prev).add(current)));
+    const t = setTimeout(() => {
+      setMounted((prev) => new Set(prev).add((current + 1) % slides.length));
+    }, 4000);
+    return () => clearTimeout(t);
   }, [current, slides.length]);
 
   const indicators = useMemo(() => slides.map((_, i) => i), [slides]);
