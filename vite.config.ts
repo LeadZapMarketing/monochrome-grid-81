@@ -4,6 +4,29 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'; 
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import type { Plugin } from "vite";
+import sharp from "sharp";
+
+// Project photos come in at up to 7,000 px wide but show at most screen-wide.
+// Cap built jpg/png images at 1920 px wide (same photo, same crop) so phones
+// do not download several MB per tile. Runs before ViteImageOptimizer.
+const MAX_IMAGE_WIDTH = 1920;
+const resizeLargeImages = (): Plugin => ({
+  name: "resize-large-images",
+  apply: "build",
+  async generateBundle(_options, bundle) {
+    for (const file of Object.values(bundle)) {
+      if (file.type !== "asset" || !/\.(jpe?g|png)$/i.test(file.fileName)) continue;
+      const input = Buffer.from(file.source as Uint8Array);
+      const meta = await sharp(input).metadata();
+      if (!meta.width || meta.width <= MAX_IMAGE_WIDTH) continue;
+      const img = sharp(input).rotate().resize({ width: MAX_IMAGE_WIDTH, withoutEnlargement: true });
+      file.source = /\.png$/i.test(file.fileName)
+        ? await img.png({ compressionLevel: 9 }).toBuffer()
+        : await img.jpeg({ quality: 82, mozjpeg: true }).toBuffer();
+    }
+  },
+});
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -19,6 +42,7 @@ export default defineConfig(({ mode }) => ({
     mode === "development" && componentTagger(),
     // 将 CSS 注入 JS：彻底消除那 460ms 的外部 CSS 加载等待时间
     cssInjectedByJsPlugin(), 
+    resizeLargeImages(),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|tiff|webp|svg)$/i,
       includePublic: true,
@@ -52,6 +76,9 @@ export default defineConfig(({ mode }) => ({
       output: {
         // 强制不分包：减少 HTTP 请求往返，提升 LCP 发现速度
         manualChunks: undefined, 
+        // "-s" marks the size-capped image build, so the live server gets the new files
+        assetFileNames: (info) =>
+          /\.(jpe?g|png)$/i.test(info.name ?? "") ? "assets/[name]-[hash]-s[extname]" : "assets/[name]-[hash][extname]",
       },
     },
   },
