@@ -104,7 +104,7 @@ const Blog = () => {
         {/* Category filter */}
         {allTags.length > 0 && (
           <div className="border-b border-border px-6">
-            <div className="max-w-5xl mx-auto flex gap-8">
+            <div className="max-w-5xl mx-auto flex gap-x-8 overflow-x-auto overflow-y-hidden pb-px md:pb-0 md:flex-wrap md:overflow-visible">
               {["All", ...allTags].map((tag) => (
                 <button
                   key={tag}
