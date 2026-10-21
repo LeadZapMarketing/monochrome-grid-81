@@ -1,10 +1,76 @@
 import { BlogPost } from "@/types/blog";
 import courtyardHouse from "@/Archive/Projects/courtyard-house_01.jpg";
+import aorInterior from "@/Archive/Services/07aor-min.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "interior-design-malaysia",
+    slug: "interior-design-malaysia",
+    path: "/guides/interior-design-malaysia/",
+    createdAt: "2026-10-21T14:00:00Z",
+    author: "Hidi Lau",
+    tags: "Interior Design",
+    image: aorInterior,
+    title: "Interior Design in Malaysia: A Homeowner's Guide to the Process",
+    seoTitle: "Interior Design in Malaysia: A Homeowner's Guide",
+    excerpt:
+      "Interior design in Malaysia covers far more than furniture and colours: it plans how a home works, from layout and storage to lighting, materials and built-ins. This guide explains what an interior designer does, who may legally call themselves one, and how a project runs from brief to handover.",
+    content: `
+<h2>The short answer</h2>
+<p>Interior design is the planning of a building's inside spaces so they are comfortable, practical and good to look at. A good interior designer works out how you will move through a room, where things are stored, how light falls at different times of day and which materials will last in Malaysia's heat and humidity, before any furniture is chosen.</p>
+<p>In Malaysia, interior design is a regulated profession. The title "Interior Designer" is protected by law, so it is worth checking who you hire.</p>
+
+<h2>What does an interior designer do?</h2>
+<p>For a home, the work usually covers:</p>
+<ul>
+  <li>an interior concept that fits the architecture and the way you live;</li>
+  <li>space planning and the furniture layout;</li>
+  <li>materials and colours, chosen for looks, upkeep and the climate;</li>
+  <li>lighting, both everyday light and the mood of each room;</li>
+  <li>built-in cabinets and storage;</li>
+  <li>feature walls, ceilings and the finishing details;</li>
+  <li>coordination with the building's structure and services, so the design can actually be built.</li>
+</ul>
+
+<h2>Who can call themselves an interior designer in Malaysia?</h2>
+<p>Under Part VA of the Architects Act 1967 (Act 117), the Board of Architects Malaysia (Lembaga Arkitek Malaysia, LAM) keeps a Register of Interior Designers. A person who is not registered may not use the title "Interior Designer", advertise themselves as one, or recover fees in court for interior design services.</p>
+<p>To register, a designer must pass the route the Board sets (as a Graduate Interior Designer with practical experience and the Board's examination), or be a corporate member of the Malaysian Institute of Interior Design (MIID) or hold a qualification the Board accepts as equivalent. A registered architect is also entitled by the Board to practise as an Interior Designer.</p>
+<p><strong>Tip:</strong> ask for the designer's LAM registration number and confirm it with the Board before you sign anything.</p>
+
+<h2>How an interior design project runs</h2>
+<ol>
+  <li><strong>Brief.</strong> You explain how you live, what is not working today, your must-haves and your budget range. Bring photos of spaces you like.</li>
+  <li><strong>Site visit and measurements.</strong> The designer measures the space and notes the structure, windows, wiring and plumbing that the design must work with.</li>
+  <li><strong>Concept.</strong> A first layout and a mood for the home: materials, colours and the overall look.</li>
+  <li><strong>Design development.</strong> Detailed layouts, ceilings, lighting, built-ins and the selection of finishes.</li>
+  <li><strong>Drawings for construction.</strong> The drawings and specifications that contractors price and build from.</li>
+  <li><strong>Approvals where needed.</strong> Works that touch the structure, the facade or the building's services may need approval from your local council or building management. Ask your designer to confirm this for your project before work starts.</li>
+  <li><strong>Construction and site checks.</strong> The designer checks the work against the drawings and answers contractors' questions.</li>
+  <li><strong>Handover.</strong> A final inspection, a list of defects to fix, then the keys back to you.</li>
+</ol>
+
+<h2>Why plan the interior with the architecture</h2>
+<p>Many problems in finished homes come from designing the inside after the building is fixed: a beam where the wardrobe should go, a socket behind the sofa, a window that floods the TV wall with glare. When the architect and interior designer plan together from the start, the layout, light, storage and structure fit from day one, and fewer changes are needed on site.</p>
+
+<h2>Questions to ask before you hire</h2>
+<ul>
+  <li>Are you registered with the Board of Architects Malaysia? Under what name?</li>
+  <li>Which stages of the process above are included, and which are not?</li>
+  <li>Who checks the work on site, and how often?</li>
+  <li>Can I see completed homes similar in size and style to mine?</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Board of Architects Malaysia (LAM): <a href="https://classic.lam.gov.my/registration-requirement-interior-designers" target="_blank" rel="noopener noreferrer">Requirements for registration as Interior Designer</a>.</li>
+  <li>Laws of Malaysia: <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117), Part VA, sections 27A to 27E</a> (incorporating amendments up to February 2015), published by LAM.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. What a specific project needs depends on its approvals and the local authority.</em></p>
+`,
+  },
   {
     id: "certificate-of-completion-and-compliance-malaysia",
     slug: "certificate-of-completion-and-compliance-malaysia",

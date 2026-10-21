@@ -50,6 +50,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "ask us about your project" },
     ],
   },
+  "interior-design-malaysia": {
+    lead: "Planning the interior of a new home or a renovation? See how we work in our",
+    links: [
+      { to: "/services/interior-design/", label: "interior design service" },
+      { to: "/contact/", label: "tell us about your space" },
+    ],
+  },
   "pam-member-in-architect-industry": {
     lead: "Hidi Lau is a LAM-registered architect and PAM member. Read",
     links: [
@@ -142,6 +149,8 @@ const BlogDetail = () => {
   }
 
   const postDate = getPostDate(post);
+  // A guide with its own address (/guides/<slug>/) keeps it as its canonical, with the slash.
+  const pagePath = post.path || `/blog/${post.slug || post.id}`;
   const description = post.excerpt || `${post.title} — HIDI Lau Architect Journal`;
   // Repo guides import their cover from the build, so it comes as a root-relative path.
   const image = post.image?.startsWith("/") ? `https://hidilauarchitect.com${post.image}` : post.image;
@@ -151,20 +160,20 @@ const BlogDetail = () => {
       <SEO
         title={post.seoTitle || `${post.title} | HIDI Lau Architect`}
         description={description}
-        path={`/blog/${post.slug || post.id}`}
+        path={pagePath}
         schema={getBlogPostingSchema({
           title: post.title || "",
           description,
-          url: `https://hidilauarchitect.com/blog/${post.slug || post.id}`,
+          url: `https://hidilauarchitect.com${pagePath}`,
           image,
           author: post.author,
           datePublished: postDate,
           dateModified: getPostModified(post),
         })}
-        trailingSlash={false}
+        trailingSlash={pagePath.endsWith("/")}
         breadcrumbs={[
           { name: "Journal", path: "/blog/" },
-          { name: post.title, path: `/blog/${post.slug || post.id}` },
+          { name: post.title, path: pagePath },
         ]}
         image={image}
         type="article"

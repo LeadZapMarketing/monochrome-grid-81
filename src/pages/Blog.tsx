@@ -146,7 +146,7 @@ const Blog = () => {
               {paginatedPosts.map((post) => (
                 <Link
                   key={post.id}
-                  to={`/blog/${post.slug || post.id}`}
+                  to={post.path || `/blog/${post.slug || post.id}`}
                   className="group block"
                 >
                   {/* Cover image */}

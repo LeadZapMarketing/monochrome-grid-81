@@ -12,6 +12,7 @@ export interface BlogPost {
     featured?: boolean;
     slug?: string;
     seoTitle?: string; // <title> when the headline is too long for search results
+    path?: string; // its own address when the guide does not live at /blog/<slug>, e.g. "/guides/<slug>/"
   }
   
   export type BlogCategory = "All" | "设计知识" | "项目故事";

@@ -38,6 +38,8 @@ const routes = [
   "/blog/architecture-in-johor-bahru",
   "/blog/pam-member-in-architect-industry",
   "/blog/certificate-of-completion-and-compliance-malaysia",
+  // Guides with their own address (a folder, like the service pages)
+  "/guides/interior-design-malaysia/",
 ];
 
 // Simple static file server for dist/
