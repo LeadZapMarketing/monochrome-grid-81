@@ -48,4 +48,30 @@
 - The guide states no fee, price or discount. (PAM's note on LAM's fee scale was left out on purpose.)
 
 ## Chief of Staff check
-- (pending)
+Checked by Chief of Staff 2026-10-22: PASS
+
+1. ✓ Act 117 s.7(aa)(i), LAM PDF: only a registered Architect may use the title. Section 2 defines "Architect" as a person registered under s.10(2).
+2. ✓ Act 117 s.7(ba): "Ar." before the name.
+3. ✓ Act 117 s.7(a). The practice also has to be registered under s.7A. The wording "only a registered Architect may" is still correct.
+4. ✓ Act 117 s.7(c): recovering fees in court.
+5. ✓ PAM "Architectural Services" page (published 12 Jan 2012, updated 21 Jul 2021): practical experience, the LAM-PAM 3 exam, PAM corporate member, then LAM registration.
+6. ✓ PAM: "acts as your adviser and confidante", and as your agent with the authorities, on tenders and on contract administration.
+7. ✓ PAM: "coordinates the necessary engineering and environmental service".
+8. ✓ Act 117 s.2, "architectural consultancy services", item (a): submitting plans or drawings to a local authority.
+9. ✓ PAM: agent when it "submits drawings to the local authorities… for planning and building approvals".
+10. ✓ PAM: "seek planning and building approvals… before a building project can be implemented". The KPKT CCC FAQ also refers to "pelan bangunan yang diluluskan" (the approved building plans).
+11. ✓ KPKT CCC FAQ: only the PSP issues the CCC, "bukan Pihak Berkuasa Tempatan" (not the local council).
+12. ✓ KPKT CCC FAQ: "Arkitek, jurutera profesional dan pelukis pelan berdaftar" (architect, professional engineer, registered draughtsman).
+13. ✓ KPKT CCC FAQ: the architect is the right PSP for homes and housing, not a professional engineer. The FAQ gives this as an example, drawing on a Board of Engineers note. "Names" is fair.
+14. ✓ PAM: tenders, contract administration, "impartially and with fairness", and advising on rights and responsibilities towards the contractor.
+15. ✓ KPKT CCC FAQ (s.70(20), Act 133): supervise, follow the approved plans, meet all of the council's technical conditions, "selamat dan layak untuk diduduki" (safe and fit to occupy).
+16. ✓ Follows from 10, 11 and 13. "Normally" is the right hedge.
+17. ✓ Hedged advice. Same wording as the live interior design guide.
+18. ✓ Hedged advice. The interior design guide is live at /guides/interior-design-malaysia/ (200).
+19. ✓ The live services page lists the same 8 stages in the same order. The guide's wording is shortened but keeps the meaning.
+- Title, meta description, H1: ✓ They add no claim beyond 6 and 10. The title is 38 characters.
+- Structured data and byline: ✓ The author is the firm, as an Organization, and the name matches the site's business name exactly.
+- Image and alt text: ✓ The photo is the client's own Horizon Hills project. The alt text is the guide title, which is the site's default.
+- Only the client has it: ✓ The firm's own 8-stage process and its own project photo.
+- Links: ✓ The CCC guide is live (200). Closing links go to the architectural design service and the contact page.
+- Publish date: set to the real publish day, 22 Oct 2026 (22:30 MYT), as the Chief asked.

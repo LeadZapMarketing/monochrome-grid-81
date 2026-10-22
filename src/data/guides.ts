@@ -10,7 +10,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
   {
     id: "what-does-an-architect-do-malaysia",
     slug: "what-does-an-architect-do-malaysia",
-    createdAt: "2026-10-23T02:00:00Z",
+    createdAt: "2026-10-22T14:30:00Z",
     author: "HIDI Lau Architect",
     tags: "Architectural Design",
     image: horizonHills,
