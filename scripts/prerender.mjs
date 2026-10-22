@@ -38,6 +38,7 @@ const routes = [
   "/blog/architecture-in-johor-bahru",
   "/blog/pam-member-in-architect-industry",
   "/blog/certificate-of-completion-and-compliance-malaysia",
+  "/blog/what-does-an-architect-do-malaysia",
   // Guides with their own address (a folder, like the service pages)
   "/guides/interior-design-malaysia/",
 ];

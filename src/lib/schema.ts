@@ -476,6 +476,10 @@ export const getBlogPostingSchema = (post: {
   ...(post.image && { image: post.image }),
   ...(post.datePublished && { datePublished: post.datePublished }),
   ...(post.dateModified && { dateModified: post.dateModified }),
-  author: { "@type": "Person", name: post.author || "Hidi Lau" },
+  // A guide bylined to the firm names the organisation, never a Person called after it.
+  author:
+    post.author === BUSINESS_INFO.name
+      ? { "@type": "Organization", "@id": `${BUSINESS_INFO.url}#organization`, name: BUSINESS_INFO.name }
+      : { "@type": "Person", name: post.author || "Hidi Lau" },
   publisher: { "@type": "Organization", "@id": `${BUSINESS_INFO.url}#organization`, name: BUSINESS_INFO.name, logo: BUSINESS_INFO.logo },
 });

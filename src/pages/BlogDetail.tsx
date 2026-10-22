@@ -50,6 +50,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "ask us about your project" },
     ],
   },
+  "what-does-an-architect-do-malaysia": {
+    lead: "Planning a new home or a major renovation and want a registered architect to take it from brief to CCC? See our",
+    links: [
+      { to: "/services/architectural-design/", label: "architectural design service" },
+      { to: "/contact/", label: "talk to us about your project" },
+    ],
+  },
   "interior-design-malaysia": {
     lead: "Planning the interior of a new home or a renovation? See how we work in our",
     links: [

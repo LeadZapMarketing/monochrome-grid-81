@@ -1,11 +1,77 @@
 import { BlogPost } from "@/types/blog";
 import courtyardHouse from "@/Archive/Projects/courtyard-house_01.jpg";
 import aorInterior from "@/Archive/Services/07aor-min.jpg";
+import horizonHills from "@/Archive/Projects/10-horizon-hills--min.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "what-does-an-architect-do-malaysia",
+    slug: "what-does-an-architect-do-malaysia",
+    createdAt: "2026-10-23T02:00:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Architectural Design",
+    image: horizonHills,
+    title: "What Does an Architect Do in Malaysia? A Homeowner's Guide",
+    seoTitle: "What Does an Architect Do in Malaysia?",
+    excerpt:
+      "An architect turns what you need from a building into a design that can be approved and built, then looks after your interests until it is finished. This guide explains what a registered architect does in Malaysia, stage by stage, and when you need one.",
+    content: `
+<h2>The short answer</h2>
+<p>An architect designs your building and guides it from the first idea to the finished, certified building. In Malaysia that means studying the site and your needs, designing the building, preparing and submitting the plans to the local council for approval, coordinating the engineers and other consultants, and checking the work on site so the building matches the approved plans.</p>
+<p>Throughout, the architect acts as your adviser, and as your agent when dealing with the authorities and the contractor.</p>
+
+<h2>Who can call themselves an architect in Malaysia?</h2>
+<p>The title is protected by law. Under section 7 of the Architects Act 1967 (Act 117), only a person registered as an Architect with the Board of Architects Malaysia (Lembaga Arkitek Malaysia, LAM) may describe themselves as an "Architect", use the abbreviation "Ar." before their name, set up an architectural consultancy practice, or recover fees in court for architectural consultancy services.</p>
+<p>To get there, a graduate gains practical experience, passes the LAM-PAM examination, joins the Malaysian Institute of Architects (Pertubuhan Akitek Malaysia, PAM) as a corporate member, and then registers with LAM as an Architect.</p>
+<p><strong>Tip:</strong> look for "Ar." before the name and confirm the registration with LAM before you appoint anyone.</p>
+
+<h2>What an architect does, stage by stage</h2>
+<p>This is how we run a home project at HIDI Lau Architect. The stages are the ones listed on our architectural design service page.</p>
+<ol>
+  <li><strong>Site analysis and design feasibility.</strong> We study the site, its surroundings, sun and wind, and what can be built on it.</li>
+  <li><strong>Space planning and layout.</strong> How you live and move through the home decides where each room goes.</li>
+  <li><strong>Concept design.</strong> The overall form, mood and direction of the building.</li>
+  <li><strong>Floor plans and elevations.</strong> The drawings that fix the layout and how the building looks from outside.</li>
+  <li><strong>Refinement with your feedback.</strong> The design is adjusted until it fits your needs.</li>
+  <li><strong>Materials and facade.</strong> Choices made for looks, upkeep and the tropical climate.</li>
+  <li><strong>Planning for daily use.</strong> Storage, light, ventilation and the details that make a home easy to live in.</li>
+  <li><strong>Coordination with structure and authority requirements.</strong> The design is coordinated with the engineers' work and the rules the plans must meet before they are submitted.</li>
+</ol>
+
+<h2>Approvals and the CCC</h2>
+<p>Before a building can be built, its plans must be approved by the local authority. Under the Architects Act, submitting plans or drawings to a local authority is one of the architectural consultancy services an architect provides, and PAM describes the architect as your agent when submitting drawings for planning and building approvals.</p>
+<p>At the end of the project, the building needs a Certificate of Completion and Compliance (CCC). It is issued by the project's Principal Submitting Person (PSP), not by the council. The PSP can be an architect, a professional engineer or a registered building draughtsman, and the Ministry of Housing and Local Government names the architect as the appropriate PSP for residential and housing projects. Read more in our <a href="/blog/certificate-of-completion-and-compliance-malaysia">guide to the CCC in Malaysia</a>.</p>
+
+<h2>During construction</h2>
+<p>PAM describes the architect's role during construction as calling for and awarding tenders, administering the building contract, and advising you on your rights and responsibilities towards the contractor, while dealing fairly with both sides. For the CCC, the PSP must supervise the construction and make sure the building follows the approved plans and the council's technical conditions, and is safe and fit to occupy.</p>
+
+<h2>Do you need an architect for your home?</h2>
+<ul>
+  <li><strong>A new house or a major extension:</strong> yes. Plans need council approval and the finished building needs a CCC signed by a PSP; for homes, that is normally the architect.</li>
+  <li><strong>A renovation that changes the structure or facade:</strong> such works may need approval from your local council or building management. Ask an architect to confirm what your project needs before work starts.</li>
+  <li><strong>Interior-only changes:</strong> you may only need an interior designer. See our <a href="/guides/interior-design-malaysia/">guide to interior design in Malaysia</a>.</li>
+</ul>
+
+<h2>Questions to ask before you appoint an architect</h2>
+<ul>
+  <li>Are you registered with LAM as an Architect? Under what name?</li>
+  <li>Which of the stages above are included in your service?</li>
+  <li>Will you act as the Principal Submitting Person and certify the CCC?</li>
+  <li>Can I see completed homes similar to mine?</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Laws of Malaysia: <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117)</a>, section 2 (definition of "architectural consultancy services") and section 7 (restrictions on unregistered persons), incorporating amendments up to February 2015, published by LAM.</li>
+  <li>Pertubuhan Akitek Malaysia (PAM): <a href="https://pam.org.my/42-resources/284-architectural-services.html" target="_blank" rel="noopener noreferrer">Architectural Services: process of obtaining an architect</a>.</li>
+  <li>Local Government Department, Ministry of Housing and Local Government (KPKT): <a href="https://jkt.kpkt.gov.my/about-lgd/faqs/certificate-of-completion-and-compliance-ccc-faq" target="_blank" rel="noopener noreferrer">Certificate of Completion and Compliance (CCC) FAQ</a>.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. What a specific project needs depends on its approvals and the local authority.</em></p>
+`,
+  },
   {
     id: "interior-design-malaysia",
     slug: "interior-design-malaysia",
