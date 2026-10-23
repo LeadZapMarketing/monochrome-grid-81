@@ -11,15 +11,13 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import ProjectDetail from "./pages/ProjectDetail";
 import Contact from "./pages/Contact";
-import BlogPost from "./pages/Blog";
-import BlogDetail from "./pages/BlogDetail";
 import NotFound from "./pages/NotFound";
 const WhatsAppChatWidget = lazy(() => import("./components/WhatsAppChatWidget"));
-import Blog from "./pages/Blog";
 import ArchitecturalDesign from "./pages/services/ArchitecturalDesign";
 import InteriorDesign from "./pages/services/InteriorDesign";
 import AuthoritySubmissions from "./pages/services/AuthoritySubmissions";
 import PassionateCraftsmanship from "./pages/services/Craftsmanship";
+import { BlogPost, BlogDetail } from "./journalRoutes";
 
 
 const queryClient = new QueryClient();
@@ -30,8 +28,9 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter future={{ v7_startTransition: true }}>
           <ScrollToTop />
+          <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about/" element={<About />} />
@@ -47,6 +46,7 @@ const App = () => (
             <Route path="/services/craftsmanship/" element={<PassionateCraftsmanship />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
           <Suspense fallback={null}>
             <WhatsAppChatWidget />
           </Suspense>
