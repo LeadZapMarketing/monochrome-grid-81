@@ -57,6 +57,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "talk to us about your project" },
     ],
   },
+  "build-house-on-own-land-malaysia": {
+    lead: "Building on your own land and want the drawings, submissions and approvals handled by a registered architect? See our",
+    links: [
+      { to: "/services/authority-submissions/", label: "authority submissions service" },
+      { to: "/contact/", label: "tell us about your land" },
+    ],
+  },
   "interior-design-malaysia": {
     lead: "Planning the interior of a new home or a renovation? See how we work in our",
     links: [
