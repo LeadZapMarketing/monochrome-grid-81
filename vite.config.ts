@@ -28,6 +28,29 @@ const resizeLargeImages = (): Plugin => ({
   },
 });
 
+// Project-grid tiles show photos at most ~1,000 px wide (phone, 3x screen).
+// Next to every large project photo, write a tile-sized webp copy
+// ("<name>-t.webp"); the homepage grid uses it, project pages keep the full one.
+const TILE_WIDTH = 1024;
+const tileCopies = (): Plugin => ({
+  name: "project-tile-copies",
+  apply: "build",
+  async generateBundle(_options, bundle) {
+    for (const file of Object.values(bundle)) {
+      if (file.type !== "asset" || !/-s\.(jpe?g|png)$/i.test(file.fileName)) continue;
+      const from = file.originalFileNames ?? [];
+      if (!from.some((n) => n.includes("Archive/Projects/"))) continue;
+      const input = Buffer.from(file.source as Uint8Array);
+      const source = await sharp(input)
+        .rotate()
+        .resize({ width: TILE_WIDTH, withoutEnlargement: true })
+        .webp({ quality: 72 })
+        .toBuffer();
+      this.emitFile({ type: "asset", fileName: file.fileName.replace(/\.(jpe?g|png)$/i, "-t.webp"), source });
+    }
+  },
+});
+
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -43,6 +66,7 @@ export default defineConfig(({ mode }) => ({
     // 将 CSS 注入 JS：彻底消除那 460ms 的外部 CSS 加载等待时间
     cssInjectedByJsPlugin(), 
     resizeLargeImages(),
+    tileCopies(),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|tiff|webp|svg)$/i,
       includePublic: true,

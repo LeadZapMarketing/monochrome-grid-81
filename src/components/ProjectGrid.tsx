@@ -8,6 +8,10 @@ const isCoarsePointer =
   window.matchMedia &&
   window.matchMedia("(pointer: coarse)").matches;
 
+// Built project photos ("-s") have a tile-sized webp copy ("-t.webp"); see vite.config.ts.
+const tileSrc = (src: string) =>
+  import.meta.env.PROD && /-s\.(jpe?g|png)$/i.test(src) ? src.replace(/\.(jpe?g|png)$/i, "-t.webp") : src;
+
 const ProjectTile = ({
   project, index, isHovered, onHover, onLeave,
 }: {
@@ -17,7 +21,7 @@ const ProjectTile = ({
   onHover: () => void;
   onLeave: () => void;
 }) => {
-  const images = [project.cover, ...project.images];
+  const images = [project.cover, ...project.images].map(tileSrc);
   const [currentImg, setCurrentImg] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const tileRef = useRef<HTMLDivElement>(null);
