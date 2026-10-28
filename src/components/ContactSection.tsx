@@ -174,8 +174,30 @@ const ContactSection = () => {
                   label: "Address",
                   value: "1, Jalan Biru 2, Taman Pelangi,\n80400 JB, Johor.",
                 },
-                { icon: Phone, label: "Telephone", value: "+6016-7442330 | +607-339 1199" },
-                { icon: Mail, label: "Email", value: "hidilin@gmail.com" },
+                {
+                  icon: Phone,
+                  label: "Telephone",
+                  value: (
+                    <>
+                      <a href="tel:+60167442330" className="hover:underline underline-offset-2" onClick={() => trackLead("phone_click", "contact_section_mobile")}>
+                        +6016-7442330
+                      </a>
+                      {" | "}
+                      <a href="tel:+6073391199" className="hover:underline underline-offset-2" onClick={() => trackLead("phone_click", "contact_section_office")}>
+                        +607-339 1199
+                      </a>
+                    </>
+                  ),
+                },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  value: (
+                    <a href="mailto:hidilin@gmail.com" className="hover:underline underline-offset-2">
+                      hidilin@gmail.com
+                    </a>
+                  ),
+                },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-4">
                   <div className="w-8 h-8 border border-border flex items-center justify-center flex-shrink-0 mt-0.5 bg-background/50 backdrop-blur-sm">
