@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import img1 from "@/Archive/Services/07aor-min.jpg";
-import img2 from "@/Archive/Services/08aor-min.png";
+import img2 from "@/Archive/Services/08aor-min.webp";
 import img3 from "@/Archive/Projects/courtyard-house_01.jpg";
 import img4 from "@/Archive/Projects/emw_01-min.jpg";
 import { getServicesSchema } from "@/lib/schema";

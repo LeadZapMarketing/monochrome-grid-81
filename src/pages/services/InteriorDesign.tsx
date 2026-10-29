@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import ContactSection from "@/components/ContactSection";
-import heroImg from "@/Archive/Services/08aor-min.png";
+import heroImg from "@/Archive/Services/08aor-min.webp";
 import img2 from "@/Archive/Services/07aor-min.jpg";
 import img3 from "@/Archive/Projects/emw_01-min.jpg";
 import { getInteriorDesignSchema } from "@/lib/schema";

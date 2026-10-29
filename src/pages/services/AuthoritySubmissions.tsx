@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import ContactSection from "@/components/ContactSection";
 import heroImg from "@/Archive/Projects/courtyard-house_01.jpg";
 import img2 from "@/Archive/Services/07aor-min.jpg";
-import img3 from "@/Archive/Services/08aor-min.png";
+import img3 from "@/Archive/Services/08aor-min.webp";
 import { getAuthoritySubmissionsSchema } from "@/lib/schema";
 
 const processItems = [

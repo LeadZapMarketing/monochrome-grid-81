@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import img2 from "@/Archive/Services/08aor-min.png";
+import img2 from "@/Archive/Services/08aor-min.webp";
 
 const BespokeDesign = () => {
   return (
@@ -24,7 +24,7 @@ const BespokeDesign = () => {
         </div>
         <div className="w-full">
           <img
-            src={img2} // 换成 WebP 格式
+            src={img2}
             alt="Bespoke architectural interior design"
             className="w-full h-auto object-cover"
             loading="lazy"
