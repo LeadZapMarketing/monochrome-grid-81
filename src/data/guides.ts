@@ -3,11 +3,99 @@ import courtyardHouse from "@/Archive/Projects/courtyard-house_01.jpg";
 import aorInterior from "@/Archive/Services/07aor-min.jpg";
 import horizonHills from "@/Archive/Projects/10-horizon-hills--min.jpg";
 import indahPutraBungalow from "@/Archive/Projects/2-min.jpg";
+import iconicTerrace from "@/Archive/Projects/81.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "house-renovation-malaysia",
+    slug: "house-renovation-malaysia",
+    createdAt: "2026-10-30T17:30:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Authority Submissions",
+    image: iconicTerrace,
+    title: "House Renovation in Malaysia: Which Permit You Need and When an Architect Must Submit",
+    seoTitle: "House Renovation in Malaysia: Permits and Approvals",
+    excerpt:
+      "Renovating a house in Malaysia usually needs the local council's permission before work starts. Small works go through a minor works permit; extensions and structural changes need plans submitted by an architect or another principal submitting person, and a CCC at the end.",
+    content: `
+<h2>The short answer</h2>
+<p>Renovating a house in Malaysia (<em>renovation rumah</em> or <em>ubahsuai rumah</em>) usually needs your local council's permission before work starts. How much paperwork you need depends on what you change:</p>
+<ul>
+  <li><strong>Small works that leave the structure alone</strong>, such as new floor or roof finishes, doors or windows, usually go through the council's minor works permit (<em>permit kerja kecil</em>).</li>
+  <li><strong>Extensions and structural changes</strong>, such as more floor area, a loft or mezzanine, a new roof or rebuilding part of the house, need approved plans. The plans are submitted by an architect or another principal submitting person, and the work ends with a Certificate of Completion and Compliance (CCC).</li>
+</ul>
+<p>Each council draws the line in its own way, so check your council's list before you hire a contractor. This guide covers landed houses (terrace, semi-detached and bungalow) in Peninsular Malaysia.</p>
+
+<h2>What the law says</h2>
+<p>Under section 70(1) of the Street, Drainage and Building Act 1974 (Act 133), no one may erect a building without the local authority's prior written permission. The Act counts an extension as "erecting" a building: under section 70(16), anyone who adds to or alters an existing building in a way that involves new foundations, or a new, partly new or bigger structure or roof on existing walls or foundations, is treated as erecting a building.</p>
+<p>Councils apply this to renovations. Majlis Bandaraya Petaling Jaya, for example, states that any addition or renovation made without the council's prior permission, or built differently from the approved plans, goes against section 70.</p>
+
+<h2>Three levels of approval</h2>
+<p>Councils sort renovation work into levels. The names differ from council to council, but the pattern is similar. Majlis Daerah Sabak Bernam's renovation guide, for example, uses three categories:</p>
+<ol>
+  <li><strong>A small works permit</strong> (<em>Permit Binaan Sementara</em>) for minimal work, such as painting, panel ceilings, factory-made grilles, and floor or wall tiles up to 6.5 square metres.</li>
+  <li><strong>A renovation permit</strong> (<em>Permit Pelan 24 Jam</em>) for work such as changes or repairs to existing fences and walls, drains, finishes that change the facade, piping, sanitary fittings, built-in cabinets and tiling over 6.5 square metres.</li>
+  <li><strong>Approved plans through the council's One Stop Centre (OSC), and a CCC</strong>, for work such as an extension adding more than 6.5 square metres, a new loft or mezzanine floor, demolishing and rebuilding part of the house, building or rebuilding a roof, building a boundary wall, or any addition or change that affects or may affect drainage and sanitation.</li>
+</ol>
+<p>Majlis Bandaraya Petaling Jaya makes a similar split: a minor works permit for work that does not change the existing structure, such as new roof, floor, door or window finishes, which the owner can apply for; and an additions and alterations plan approval for work that adds to the existing structure.</p>
+<p>Some councils go further. In Putrajaya, Perbadanan Putrajaya does not allow renovations that change a house's facade at all, and allows added structures only as timber pergolas with polycarbonate roofs.</p>
+<p><strong>Interior work can need a permit too.</strong> Sabak Bernam's guide puts piping, sanitary fittings and built-in cabinets under its renovation permit, and Putrajaya's guideline counts interior finishes and changes to plumbing and wiring as renovation.</p>
+
+<h2>In Johor Bahru: MBJB's minor renovation permit</h2>
+<p>In Johor Bahru, Majlis Bandaraya Johor Bahru (MBJB) handles minor renovations as a plan permit application (<em>Permohonan Pelan Permit, Kerja Ubahsuai Kecil</em>) made through OSC 3.0 Plus Online. Its checklist asks for:</p>
+<ul>
+  <li>renovation plans signed by the owner and by an architect, registered draughtsman or consulting engineer, with their practice stamp;</li>
+  <li>a formal application letter;</li>
+  <li>copies of the latest assessment (<em>cukai harta</em>) and quit rent (<em>cukai tanah</em>) receipts and of the land title;</li>
+  <li>colour photographs of the site;</li>
+  <li>a copy of the house's CCC or Certificate of Fitness (CF).</li>
+</ul>
+<p>So in Johor Bahru, even a minor renovation starts with drawings signed by a qualified professional.</p>
+
+<h2>Extensions and structural changes: plans by a principal submitting person</h2>
+<p>For work that needs approved plans, section 70(2) of Act 133 and the Uniform Building By-Laws 1984 require the plans to be submitted by a principal submitting person or a submitting person: a professional architect, a professional engineer or a registered building draughtsman. Majlis Bandaraya Petaling Jaya tells homeowners to appoint a consultant to submit the application before any building work starts.</p>
+<p>Councils also ask for more than drawings:</p>
+<ul>
+  <li><strong>Structural drawings.</strong> Putrajaya asks for structural plans and calculations certified by a registered structural engineer when the work involves reinforced concrete or changes the original structure. Sabak Bernam asks for architect's plans and reinforced concrete plans for its third category.</li>
+  <li><strong>Your neighbour's consent.</strong> Putrajaya asks for a no-objection letter from the neighbours when the work touches the part of the house next to theirs, and Sabak Bernam asks for the neighbour's consent letter for its second and third categories.</li>
+  <li><strong>Planning permission, where it applies.</strong> Petaling Jaya notes that if the work raises planning issues, planning permission (<em>kebenaran merancang</em>) must be approved first.</li>
+</ul>
+
+<h2>When the work is finished: the CCC</h2>
+<p>For renovation work built under approved plans, the principal submitting person supervises the work and issues the Certificate of Completion and Compliance (CCC) at the end. The CCC is issued by the principal submitting person, not by the council. Read more in our <a href="/blog/certificate-of-completion-and-compliance-malaysia">guide to the CCC in Malaysia</a>.</p>
+
+<h2>If you renovate without approval</h2>
+<p>Under section 70(11) of Act 133, altering a building without the local authority's prior written permission is an offence with a fine of up to RM25,000, and on the council's application a Magistrate's Court will order the building to be altered or demolished. Where no court case has been brought and the plans are submitted afterwards, section 70(14) requires a payment of five to twenty times the normal fees before the council will accept the plans.</p>
+<p>Getting the approval first is cheaper and faster than putting things right later.</p>
+
+<h2>How we handle renovations</h2>
+<p>HIDI Lau Architect takes on structural renovations, architectural additions and interior transformations for landed homes, including bungalows, semi-detached homes and link houses. <a href="/project/iconic-terrace/">The Iconic Terrace</a> in Johor Bahru, pictured above, is one of them: a terrace house transformed into a distinctive modern home with striking facade detailing, generous interior volumes and a refined material palette, with the architecture, facade and interior designed by our studio.</p>
+<p>On a renovation, our <a href="/services/authority-submissions/">authority submissions</a> work runs alongside the design: preparing the submission drawings, coordinating the other consultants the submission needs, liaising with the council where required, and follow-up and revisions when they are needed. Because the design and the submissions are planned together, the renovation you approve on paper is one the council can approve too.</p>
+
+<h2>Questions to settle before you renovate</h2>
+<ul>
+  <li>Does the work add floor area, or touch the structure, the roof, the facade or the wall you share with a neighbour?</li>
+  <li>Which permit or approval does my council ask for this kind of work?</li>
+  <li>Who will prepare and sign the drawings, and who will submit them?</li>
+  <li>Will the work need a CCC when it is finished?</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Laws of Malaysia: <a href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20133.pdf" target="_blank" rel="noopener noreferrer">Street, Drainage and Building Act 1974 (Act 133)</a>, sections 1, 3 and 70, Attorney General's Chambers. Section 70 is also published by the <a href="https://www.hba.org.my/laws/street/partV.htm" target="_blank" rel="noopener noreferrer">National House Buyers Association (HBA)</a>.</li>
+  <li><a href="https://jkt.kpkt.gov.my/wp-content/d/sites/default/files/2022-10/UKBS%201984%201C.pdf" target="_blank" rel="noopener noreferrer">Uniform Building By-Laws 1984</a>, by-laws 2 and 3, Local Government Department, KPKT.</li>
+  <li>Majlis Bandaraya Petaling Jaya: <a href="https://www.mbpj.gov.my/en/node/1344" target="_blank" rel="noopener noreferrer">Building Control Department FAQ</a>.</li>
+  <li>Majlis Daerah Sabak Bernam: <a href="https://www.mdsb.gov.my/images/panduan-ubah-suai-bangunan-mdsb/buku_ubah_suai_bangunan_mdsb_.pdf" target="_blank" rel="noopener noreferrer">Panduan Ubah Suai Bangunan</a>.</li>
+  <li>Perbadanan Putrajaya: <a href="https://www.ppj.gov.my/storage/prosedur/164/164.pdf" target="_blank" rel="noopener noreferrer">Garis Panduan Kerja-Kerja Kecil dan Ubahsuai Bangunan Kediaman</a>.</li>
+  <li>Majlis Bandaraya Johor Bahru: <a href="https://www.mbjb.gov.my/sites/default/files/2023-01/Borang%20Senarai%20Semak%20Permohonan%20Pelan%20Permit%20(Kerja%20Ubahsuaian%20Kecil)%20-MBJBOSCUTP2_14_Dec2022%20(1).pdf" target="_blank" rel="noopener noreferrer">checklist, plan permit for minor renovation work</a>.</li>
+  <li>Local Government Department, KPKT: <a href="https://jkt.kpkt.gov.my/about-lgd/faqs/certificate-of-completion-and-compliance-ccc-faq" target="_blank" rel="noopener noreferrer">Certificate of Completion and Compliance (CCC) FAQ</a>.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. What your renovation needs depends on your house, the work and your council's current rules.</em></p>
+`,
+  },
   {
     id: "build-house-on-own-land-malaysia",
     slug: "build-house-on-own-land-malaysia",

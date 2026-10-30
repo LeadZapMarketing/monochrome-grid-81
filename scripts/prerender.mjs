@@ -40,6 +40,7 @@ const routes = [
   "/blog/certificate-of-completion-and-compliance-malaysia",
   "/blog/what-does-an-architect-do-malaysia",
   "/blog/build-house-on-own-land-malaysia",
+  "/blog/house-renovation-malaysia",
   // Guides with their own address (a folder, like the service pages)
   "/guides/interior-design-malaysia/",
 ];
