@@ -30,8 +30,8 @@ const InteriorDesign = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Interior Design Malaysia for Homes | Hidi Lau Architect"
-        description="Our interior design service focuses on creating interiors that are visually refined, comfortable, and practical for everyday living or working."
+        title="Interior Design Johor Bahru | Hidi Lau Architect"
+        description="Interior design in Johor Bahru by Hidi Lau Architect, est. 1989: space planning, built-in cabinets, lighting, materials and finishes for homes and workplaces."
         path="/services/interior-design/"
         breadcrumbs={[
           { name: "Services", path: "/services/" },
