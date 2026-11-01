@@ -4,11 +4,76 @@ import aorInterior from "@/Archive/Services/07aor-min.jpg";
 import horizonHills from "@/Archive/Projects/10-horizon-hills--min.jpg";
 import indahPutraBungalow from "@/Archive/Projects/2-min.jpg";
 import iconicTerrace from "@/Archive/Projects/81.jpg";
+import suteraTerrace from "@/Archive/Projects/sutera_01-min.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "pelukis-pelan-vs-architect-malaysia",
+    slug: "pelukis-pelan-vs-architect-malaysia",
+    createdAt: "2026-11-01T18:00:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Authority Submissions",
+    image: suteraTerrace,
+    title: "Pelukis Pelan or Architect? Who May Submit Your Building Plans in Malaysia",
+    seoTitle: "Pelukis Pelan vs Architect: Who May Submit Building Plans",
+    excerpt:
+      "A pelukis pelan can draw your plans, but only a qualified person may submit them to the council. A registered building draughtsman may submit plans only for buildings up to two storeys and 300 square metres, in the council areas on their registration; anything bigger is beyond their limits.",
+    content: `
+<h2>The short answer</h2>
+<p>In everyday Malay, a <em>pelukis pelan</em> is anyone who draws building plans. Drawing the plans and submitting them to the council for approval are two different things:</p>
+<ul>
+  <li><strong>Only a qualified person may submit building plans</strong>: a Professional Architect, a Professional Engineer or a building draughtsman registered under the law.</li>
+  <li><strong>A registered Building Draughtsman</strong> (<em>pelukis pelan bangunan berdaftar</em>), registered with the Board of Architects Malaysia (LAM), may submit plans only for buildings of up to two storeys with a total built-up floor area of no more than 300 square metres (about 3,230 square feet), and only to the councils named in their registration.</li>
+  <li><strong>The Board stopped registering new Building Draughtsmen in 2015</strong>, so the ones practising today were registered on or before 31 December 2015.</li>
+  <li><strong>Anything bigger</strong>, such as a three-storey house or a bungalow above 300 square metres, is beyond a Building Draughtsman's limits.</li>
+</ul>
+<p>This guide covers building plans for houses in Peninsular Malaysia.</p>
+
+<h2>Who may submit building plans</h2>
+<p>Under section 70 of the Street, Drainage and Building Act 1974 (Act 133), anyone who intends to erect a building must have the plans submitted to the local authority by a principal submitting person or a submitting person. Both must be a "qualified person", which the Act defines as a Professional Architect, a Professional Engineer or a building draughtsman registered under any written law. The Uniform Building By-Laws 1984 repeat the rule: every plan, drawing or calculation for a building is submitted by a principal submitting person or a submitting person.</p>
+<p>So a pelukis pelan who is not registered may help draw your house, but cannot be the one who submits it. Under section 20 of the Architects Act 1967 (Act 117), no one may practise as, or call themselves, a Building Draughtsman unless they are registered.</p>
+
+<h2>What a registered Building Draughtsman may submit</h2>
+<p>Section 24 of the Architects Act sets the limits:</p>
+<ul>
+  <li><strong>Size:</strong> plans of buildings not exceeding two storeys in height, with a total built-up floor area of no more than three hundred square metres. The limit counts any one project, or a series of projects in the same development by the same client, so a bigger house cannot be split into smaller submissions for the same owner.</li>
+  <li><strong>Place:</strong> plans may be submitted only to, and within the limits of, the building authority for which area the draughtsman's registration was approved. The approved areas are written on the certificate of registration.</li>
+  <li><strong>Practice:</strong> a Building Draughtsman may not practise under the name of a limited company, and a person employed by a limited company, a building contractor, a manufacturer or a commercial firm cannot be registered.</li>
+</ul>
+<p>The Architects Rules 1996 add that a Building Draughtsman must not sign drawings, plans or specifications for an approval unless they, their employees or people under their supervision prepared them.</p>
+
+<h2>Why there are no new Building Draughtsmen</h2>
+<p>The Architects (Amendment) Act 2015 (Act A1480) deleted the section on registering Building Draughtsmen; the Bill's explanatory statement says the change was made to discontinue new registration. The Act now defines a Building Draughtsman as one registered with the Board on or before 1 June 2015, or registered or deemed registered on or before 31 December 2015. Those already registered may keep practising and renew their registration every year.</p>
+
+<h2>What an Architect may submit</h2>
+<p>Under section 8 of the Architects Act, an Architect is entitled to submit plans or drawings to any person or authority in Malaysia. The two-storey, 300 square metre and council-area limits in section 24 apply to Building Draughtsmen, not to Architects. Only a registered Architect may use the title "Architect" and the abbreviation "Ar." before their name.</p>
+
+<h2>Questions to ask before you hire</h2>
+<ul>
+  <li>Are you a Professional Architect, a Professional Engineer or a registered Building Draughtsman? Can I see your certificate of registration?</li>
+  <li>If you are a Building Draughtsman, does your registration cover my council?</li>
+  <li>Is my house within two storeys and 300 square metres of built-up floor area, including any later phases?</li>
+  <li>Who will sign the drawings, and did that person, their staff or people under their supervision prepare them?</li>
+</ul>
+
+<h2>How we handle submissions</h2>
+<p>HIDI Lau Architect is led by Ar. Hidi Lau Wei Lin, an Architect registered with the Board of Architects Malaysia (LAM). <a href="/project/sutera-terrace/">Sutera Terrace Corner</a> in Johor Bahru, pictured above, is one of our homes: a corner terrace reimagined with a clean contemporary language, with the architecture, interior and facade designed by our studio.</p>
+<p>Our <a href="/services/authority-submissions/">authority submissions</a> work runs alongside the design: preparing the submission drawings, coordinating the other consultants the submission needs, building plan submission support, liaising with the local authority where required, and follow-up and revisions when they are needed.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li>Laws of Malaysia: <a href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20133.pdf" target="_blank" rel="noopener noreferrer">Street, Drainage and Building Act 1974 (Act 133)</a>, sections 1, 3 and 70, Attorney General's Chambers.</li>
+  <li><a href="https://jkt.kpkt.gov.my/wp-content/d/sites/default/files/2022-10/UKBS%201984%201C.pdf" target="_blank" rel="noopener noreferrer">Uniform Building By-Laws 1984</a>, by-laws 2 and 3, Local Government Department, KPKT.</li>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117), incorporating amendments up to February 2015</a>, sections 2, 7, 8, 20, 21 and 24, and section 23 of the Architects (Amendment) Act 2015.</li>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/Architect%20Rules%201996%20-%20Amendment%202022.pdf" target="_blank" rel="noopener noreferrer">Architects Rules 1996, incorporating amendments up to October 2022</a>, rule 25 and the Code of Conduct for Building Draughtsmen.</li>
+  <li><a href="https://www.cljlaw.com/files/bills/pdf/2014/MY_FS_BIL_2014_21.pdf" target="_blank" rel="noopener noreferrer">Architects (Amendment) Bill 2014</a>, clauses 23 and 25 and the explanatory statement.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. Check a person's registration with the Board of Architects Malaysia before you hire.</em></p>
+`,
+  },
   {
     id: "house-renovation-malaysia",
     slug: "house-renovation-malaysia",

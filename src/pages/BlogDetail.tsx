@@ -57,6 +57,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "talk to us about your project" },
     ],
   },
+  "pelukis-pelan-vs-architect-malaysia": {
+    lead: "Want your house plans prepared and submitted by a registered architect, whatever the size? See our",
+    links: [
+      { to: "/services/authority-submissions/", label: "authority submissions service" },
+      { to: "/contact/", label: "tell us about your project" },
+    ],
+  },
   "house-renovation-malaysia": {
     lead: "Planning an extension or a structural renovation and want the drawings and council submissions handled by a registered architect? See our",
     links: [

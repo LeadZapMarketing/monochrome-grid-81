@@ -41,6 +41,7 @@ const routes = [
   "/blog/what-does-an-architect-do-malaysia",
   "/blog/build-house-on-own-land-malaysia",
   "/blog/house-renovation-malaysia",
+  "/blog/pelukis-pelan-vs-architect-malaysia",
   // Guides with their own address (a folder, like the service pages)
   "/guides/interior-design-malaysia/",
 ];
