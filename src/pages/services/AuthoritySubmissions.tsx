@@ -8,6 +8,7 @@ import heroImg from "@/Archive/Projects/courtyard-house_01.jpg";
 import img2 from "@/Archive/Services/07aor-min.jpg";
 import img3 from "@/Archive/Services/08aor-min.webp";
 import { getAuthoritySubmissionsSchema } from "@/lib/schema";
+import { heroImageProps } from "@/lib/heroImage";
 
 const processItems = [
   "Preparation of submission drawings",
@@ -71,6 +72,7 @@ const AuthoritySubmissions = () => {
         >
           <img
             src={heroImg}
+            {...heroImageProps(heroImg, 1600, 900)}
             alt="Authority Submissions"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.48)" }}

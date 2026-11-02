@@ -8,6 +8,7 @@ import heroImg from "@/Archive/Services/07aor-min.jpg";
 import img2 from "@/Archive/Projects/courtyard-house_01.jpg";
 import img3 from "@/Archive/Projects/emw_01-min.jpg";
 import { getArchitecturalDesignSchema } from "@/lib/schema";
+import { heroImageProps } from "@/lib/heroImage";
 
 const processItems = [
   "Site analysis and design feasibility",
@@ -75,6 +76,7 @@ const ArchitecturalDesign = () => {
         >
           <img
             src={heroImg}
+            {...heroImageProps(heroImg, 1920, 1080)}
             alt="Architectural Design"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.52)" }}

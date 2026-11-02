@@ -8,6 +8,7 @@ import heroImg from "@/Archive/Projects/emw_01-min.jpg";
 import img2 from "@/Archive/Projects/courtyard-house_01.jpg";
 import img3 from "@/Archive/Services/07aor-min.jpg";
 import { getPassionateCraftsmanshipSchema } from "@/lib/schema";
+import { heroImageProps } from "@/lib/heroImage";
 
 const processItems = [
   "Careful attention to design details",
@@ -69,6 +70,7 @@ const PassionateCraftsmanship = () => {
         >
           <img
             src={heroImg}
+            {...heroImageProps(heroImg, 1920, 1440)}
             alt="Passionate Craftsmanship"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.48)" }}
