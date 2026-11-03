@@ -1,7 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const featureImg = "/images/hero.jpg";
+// Same photo as the first hero slide, which the homepage already preloads: no second download.
+const featureImg = "/images/hero/1.webp";
 const ResidentialFeature = () => {
   return (
     <section className="w-full bg-background py-16 md:py-24">
