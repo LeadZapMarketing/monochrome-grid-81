@@ -1,8 +1,5 @@
 import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
@@ -20,39 +17,33 @@ import PassionateCraftsmanship from "./pages/services/Craftsmanship";
 import { BlogPost, BlogDetail } from "./journalRoutes";
 
 
-const queryClient = new QueryClient();
 
 const App = () => (
   <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter future={{ v7_startTransition: true }}>
-          <ScrollToTop />
-          <Suspense fallback={null}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about/" element={<About />} />
-            <Route path="/services/" element={<Services />} />
-            <Route path="/contact/" element={<Contact />} />
-            <Route path="/project/:id/" element={<ProjectDetail />} />
-            <Route path="/blog/" element={<BlogPost />} />
-            <Route path="/blog/:slug/" element={<BlogDetail />} />
-            <Route path="/guides/:slug/" element={<BlogDetail />} />
-            <Route path="/services/architectural-design/" element={<ArchitecturalDesign />} />
-            <Route path="/services/interior-design/" element={<InteriorDesign />} />
-            <Route path="/services/authority-submissions/" element={<AuthoritySubmissions />} />
-            <Route path="/services/craftsmanship/" element={<PassionateCraftsmanship />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          </Suspense>
-          <Suspense fallback={null}>
-            <WhatsAppChatWidget />
-          </Suspense>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <Toaster />
+    <BrowserRouter future={{ v7_startTransition: true }}>
+      <ScrollToTop />
+      <Suspense fallback={null}>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about/" element={<About />} />
+        <Route path="/services/" element={<Services />} />
+        <Route path="/contact/" element={<Contact />} />
+        <Route path="/project/:id/" element={<ProjectDetail />} />
+        <Route path="/blog/" element={<BlogPost />} />
+        <Route path="/blog/:slug/" element={<BlogDetail />} />
+        <Route path="/guides/:slug/" element={<BlogDetail />} />
+        <Route path="/services/architectural-design/" element={<ArchitecturalDesign />} />
+        <Route path="/services/interior-design/" element={<InteriorDesign />} />
+        <Route path="/services/authority-submissions/" element={<AuthoritySubmissions />} />
+        <Route path="/services/craftsmanship/" element={<PassionateCraftsmanship />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      </Suspense>
+      <Suspense fallback={null}>
+        <WhatsAppChatWidget />
+      </Suspense>
+    </BrowserRouter>
   </HelmetProvider>
 );
 
