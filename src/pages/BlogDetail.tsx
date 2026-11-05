@@ -94,6 +94,15 @@ const NEXT_STEPS: Record<string, NextStep> = {
   },
 };
 
+// Search result title and description for Journal posts kept in the database, whose headlines run too long for Google.
+const SEARCH_META: Record<string, { title: string; description: string }> = {
+  "hiring-an-architect-in-johor-bahru": {
+    title: "Hiring an Architect in Johor Bahru: When You Need One | HIDI Lau",
+    description:
+      "Building or renovating in Johor Bahru? See when the law requires a registered architect, what an interior designer can do, and how MBJB approval works.",
+  },
+};
+
 const DEFAULT_NEXT_STEP: NextStep = {
   lead: "Thinking about your own project? Explore our",
   links: [
@@ -179,14 +188,15 @@ const BlogDetail = () => {
   const postDate = getPostDate(post);
   // A guide with its own address (/guides/<slug>/) keeps it as its canonical, with the slash.
   const pagePath = post.path || `/blog/${post.slug || post.id}`;
-  const description = post.excerpt || `${post.title} — HIDI Lau Architect Journal`;
+  const searchMeta = SEARCH_META[post.slug || ""];
+  const description = searchMeta?.description || post.excerpt || `${post.title} — HIDI Lau Architect Journal`;
   // Repo guides import their cover from the build, so it comes as a root-relative path.
   const image = post.image?.startsWith("/") ? `https://hidilauarchitect.com${post.image}` : post.image;
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title={post.seoTitle || `${post.title} | HIDI Lau Architect`}
+        title={post.seoTitle || searchMeta?.title || `${post.title} | HIDI Lau Architect`}
         description={description}
         path={pagePath}
         schema={getBlogPostingSchema({
