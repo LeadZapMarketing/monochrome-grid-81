@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import img1 from "@/Archive/HomePage/Dining_Room-min_600x600.jpg";
 import img2 from "@/Archive/HomePage/Living_Room.jpg";
+import { tileImageProps } from "@/lib/heroImage";
 
 const ConnectWithUs = () => {
   return (
@@ -38,6 +39,7 @@ const ConnectWithUs = () => {
           />
           <img
             src={img2}
+            {...tileImageProps(img2, 1920, "(min-width: 768px) 640px, 66vw")}
             alt="Designed living interior"
             className="w-full h-full object-cover aspect-[3/4]"
             loading="lazy"

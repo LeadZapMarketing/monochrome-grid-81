@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { z } from "zod";
 import heroImg from "@/Archive/Projects/courtyard-house_60.jpg";
+import { tileImageProps } from "@/lib/heroImage";
 import { trackLead } from "@/lib/leadEvents";
 import { lzEnquiry } from "@/lib/lzEnquiry";
 
@@ -145,6 +146,7 @@ const ContactSection = () => {
       <div className="absolute inset-0">
         <img
           src={heroImg}
+          {...tileImageProps(heroImg, 1920, "100vw")}
           alt="Contact Background"
           loading="lazy"
           decoding="async"

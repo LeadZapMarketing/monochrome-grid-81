@@ -29,8 +29,9 @@ const resizeLargeImages = (): Plugin => ({
 });
 
 // Project-grid tiles and phone-size service heroes show photos at most ~1,000 px wide.
-// Next to every large project or service photo, write a tile-sized webp copy
-// ("<name>-t.webp"); the homepage grid and phone service heroes use it.
+// Next to every large project or service photo (and the homepage "Connect With Us"
+// living room), write a tile-sized webp copy ("<name>-t.webp"); the homepage grid,
+// phone service heroes and the photos lower on the page use it.
 const TILE_WIDTH = 1024;
 const tileCopies = (): Plugin => ({
   name: "project-tile-copies",
@@ -39,7 +40,7 @@ const tileCopies = (): Plugin => ({
     for (const file of Object.values(bundle)) {
       if (file.type !== "asset" || !/-s\.(jpe?g|png)$/i.test(file.fileName)) continue;
       const from = file.originalFileNames ?? [];
-      if (!from.some((n) => /Archive\/(Projects|Services)\//.test(n))) continue;
+      if (!from.some((n) => /Archive\/(Projects|Services)\/|Archive\/HomePage\/Living_Room\./.test(n))) continue;
       const input = Buffer.from(file.source as Uint8Array);
       const source = await sharp(input)
         .rotate()
