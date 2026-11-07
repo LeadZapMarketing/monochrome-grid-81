@@ -94,12 +94,18 @@ const NEXT_STEPS: Record<string, NextStep> = {
   },
 };
 
-// Search result title and description for Journal posts kept in the database, whose headlines run too long for Google.
+// Search result title and description for Journal posts whose headlines or summaries run too long for Google.
+// A guide's own seoTitle still wins over the title here.
 const SEARCH_META: Record<string, { title: string; description: string }> = {
   "hiring-an-architect-in-johor-bahru": {
     title: "Hiring an Architect in Johor Bahru: When You Need One | HIDI Lau",
     description:
       "Building or renovating in Johor Bahru? See when the law requires a registered architect, what an interior designer can do, and how MBJB approval works.",
+  },
+  "house-renovation-malaysia": {
+    title: "House Renovation Permit Malaysia: Minor Works or Full Plans?",
+    description:
+      "Need council approval to renovate your house? See what counts as minor renovation, when an architect must submit plans, and how MBJB handles permits in JB.",
   },
 };
 

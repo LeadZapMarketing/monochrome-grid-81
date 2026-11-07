@@ -82,7 +82,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
     tags: "Authority Submissions",
     image: iconicTerrace,
     title: "House Renovation in Malaysia: Which Permit You Need and When an Architect Must Submit",
-    seoTitle: "House Renovation in Malaysia: Permits and Approvals",
+    seoTitle: "House Renovation Permit Malaysia: Minor Works or Full Plans?",
     excerpt:
       "Renovating a house in Malaysia usually needs the local council's permission before work starts. Small works go through a minor works permit; extensions and structural changes need plans submitted by an architect or another principal submitting person, and a CCC at the end.",
     content: `
