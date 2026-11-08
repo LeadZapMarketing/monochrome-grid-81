@@ -57,6 +57,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "talk to us about your project" },
     ],
   },
+  "bungalow-house-design-malaysia": {
+    lead: "Planning a bungalow and want the layout, the rules and the approvals worked out together? See our",
+    links: [
+      { to: "/services/architectural-design/", label: "architectural design service" },
+      { to: "/contact/", label: "tell us about your lot" },
+    ],
+  },
   "pelukis-pelan-vs-architect-malaysia": {
     lead: "Want your house plans prepared and submitted by a registered architect, whatever the size? See our",
     links: [

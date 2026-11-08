@@ -5,11 +5,110 @@ import horizonHills from "@/Archive/Projects/10-horizon-hills--min.jpg";
 import indahPutraBungalow from "@/Archive/Projects/2-min.jpg";
 import iconicTerrace from "@/Archive/Projects/81.jpg";
 import suteraTerrace from "@/Archive/Projects/sutera_01-min.jpg";
+import kluangFarmhouse from "@/Archive/Projects/KLUANGRESORTFARMHOUSE/bg_01.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "bungalow-house-design-malaysia",
+    slug: "bungalow-house-design-malaysia",
+    createdAt: "2026-11-08T21:30:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Architectural Design",
+    image: kluangFarmhouse,
+    title: "Bungalow House Design in Malaysia: The Rules That Shape Your Floor Plan",
+    seoTitle: "Bungalow House Design Malaysia: Rules That Shape the Plan",
+    excerpt:
+      "A bungalow design starts with how you live, but the lot and the rules decide what fits: setbacks of about 20 feet at the front and 10 feet at the sides and rear, up to three storeys, and minimum room sizes, ceiling heights and windows set by the building by-laws.",
+    content: `
+<h2>The short answer</h2>
+<p>A good bungalow design (<em>reka bentuk rumah banglo</em>) starts with how your family lives, but four things decide what can actually fit on your lot:</p>
+<ul>
+  <li><strong>Setbacks:</strong> the national housing planning guideline asks a detached house to stand at least 6.1 metres (20 feet) from the front boundary and 3.0 metres (10 feet) from the side and rear boundaries.</li>
+  <li><strong>Height:</strong> both the national guideline and Majlis Bandaraya Johor Bahru's guideline allow a detached house of up to three storeys.</li>
+  <li><strong>Rooms:</strong> the Uniform Building By-Laws 1984 set minimum room sizes, ceiling heights and window areas for every house.</li>
+  <li><strong>Your council and title:</strong> the local plan, your land title and your council's own guideline can change these numbers for your lot.</li>
+</ul>
+<p>This guide covers detached houses (<em>rumah sesebuah</em>) in Peninsular Malaysia, with Johor Bahru as the example.</p>
+
+<h2>Start with the brief, not the facade</h2>
+<p>Before any drawing, write down how the house will be used:</p>
+<ul>
+  <li>Who lives there now, and who may live there in ten years (parents moving in, children leaving)?</li>
+  <li>Which rooms you use every day, and which only for guests or festivals.</li>
+  <li>Whether anyone needs a bedroom on the ground floor.</li>
+  <li>How many cars need to park inside the gate.</li>
+  <li>Which rooms should open to the garden, and which need privacy from the road and the neighbours.</li>
+</ul>
+<p>A clear brief keeps the design from growing rooms you will not use.</p>
+
+<h2>Setbacks: how much of the lot you can build on</h2>
+<p>A setback (<em>anjakan bangunan</em>) is the distance the house must keep from each boundary. The national Housing Planning Guideline (<em>Garis Panduan Perancangan Perumahan</em>) sets these minimums for a standard detached house:</p>
+<ul>
+  <li><strong>Front:</strong> 6.1 metres (20 feet).</li>
+  <li><strong>Side and rear:</strong> 3.0 metres (10 feet) from the wall to the boundary, and 2.0 metres (6.5 feet) from the edge of the roof to the boundary.</li>
+  <li><strong>Corner lot, side facing the road:</strong> 6.1 metres (20 feet) from the wall to the road reserve.</li>
+  <li><strong>Car porch:</strong> its front end must stay at least 3.05 metres (10 feet) from the front boundary.</li>
+</ul>
+<p>Majlis Bandaraya Johor Bahru's own planning guideline for a detached house uses the same figures: 20 feet at the front and on a side facing a road reserve, and 10 feet at the side and rear.</p>
+<p><strong>A worked example:</strong> the national guideline's minimum lot for a standard detached house is 50 feet by 75 feet. Take away 10 feet on each side, 20 feet at the front and 10 feet at the rear, and the walls of the house must fit within about 30 feet by 45 feet, or 1,350 square feet per floor, before your council's other conditions. On a lot like this, more space has to come from another storey, not a wider footprint.</p>
+
+<h2>How many storeys</h2>
+<p>The national guideline allows landed houses of up to three storeys, not counting a floor below road level, with no more than 18.3 metres (60 feet) from the ground to the roof. Majlis Bandaraya Johor Bahru's guideline also allows a detached house of up to three storeys, but counts a sub-basement as one of them.</p>
+
+<h2>What the building by-laws ask of every room</h2>
+<p>The Uniform Building By-Laws 1984 set minimums that apply to every house, however large:</p>
+<ul>
+  <li><strong>Room sizes (by-law 42):</strong> the first habitable room must be at least 11 square metres, the second at least 9.3 square metres and every other one at least 6.5 square metres. Every habitable room must be at least 2 metres wide. A kitchen must be at least 4.5 square metres and 1.5 metres wide. Bathrooms, toilets, open verandahs, terraces and garages do not count as habitable rooms.</li>
+  <li><strong>Ceiling heights (by-law 44):</strong> at least 2.5 metres for living rooms and bedrooms, 2.25 metres for kitchens and 2 metres for bathrooms, porches, balconies, verandahs and garages.</li>
+  <li><strong>Daylight and fresh air (by-law 39):</strong> each room needs windows with a total area of at least 10% of its floor area, and openings that let air pass freely of at least 5% of its floor area. Each bathroom or toilet needs openings of at least 0.2 square metres.</li>
+</ul>
+<p>These are minimums, not targets, and they are what your plans are checked against.</p>
+
+<h2>How we design a bungalow</h2>
+<p>At HIDI Lau Architect, we study the site, the surrounding environment, the way you live, the flow between spaces, natural light, ventilation, materials and long-term use before we shape the design. Our architectural design work covers:</p>
+<ol>
+  <li>site analysis and design feasibility;</li>
+  <li>space planning and layout development;</li>
+  <li>conceptual design direction;</li>
+  <li>floor plans and elevations;</li>
+  <li>design refinement based on your feedback;</li>
+  <li>material and facade consideration;</li>
+  <li>functional planning for daily use;</li>
+  <li>coordination between design, structure and authority requirements.</li>
+</ol>
+<p>Three of our own bungalows show how the brief and the site shape the result:</p>
+<ul>
+  <li><a href="/project/indah-putra/">Indah Putra Bungalow</a>, Johor Bahru: the challenge was a home that feels spacious and calm without excessive square footage, through proportion, natural light and the way indoor rooms open to outdoor spaces.</li>
+  <li><a href="/project/horizon-hills/">Horizon Hills</a>, Johor Bahru: a home in a gated township that had to stand apart from its neighbours while respecting the community's wider architectural character.</li>
+  <li><a href="/project/kluang-resort-farmhouse/">Kluang Resort Farmhouse</a>, Kluang (pictured above): pitched rooflines, natural timber and an honest material palette, with the comfort of a contemporary home.</li>
+</ul>
+
+<h2>From design to approval</h2>
+<p>Once the design is settled, the plans must be submitted to your council by a qualified person, and a registered Building Draughtsman may only submit plans for buildings of up to two storeys and 300 square metres of built-up floor area. A bungalow above either limit needs a Professional Architect or a Professional Engineer to submit it. Read <a href="/blog/pelukis-pelan-vs-architect-malaysia">Pelukis Pelan or Architect?</a> for who may submit, and <a href="/blog/build-house-on-own-land-malaysia">Building a House on Your Own Land in Malaysia</a> for the approvals in order, from the land title to the Certificate of Completion and Compliance (CCC).</p>
+
+<h2>Questions to settle before the first sketch</h2>
+<ul>
+  <li>What are my lot's width and depth, and is it a corner lot?</li>
+  <li>What do my land title and my council's local plan allow on this lot?</li>
+  <li>How many rooms do we need now, and in ten years?</li>
+  <li>Who will design the house, submit the plans and certify the CCC?</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Jabatan Perancangan Bandar dan Desa Semenanjung Malaysia (now PLANMalaysia): <a href="https://jkt.kpkt.gov.my/wp-content/d/sites/default/files/2021-12/GP_Perumahan.pdf" target="_blank" rel="noopener noreferrer">Garis Panduan Perancangan Perumahan (2014)</a>, sections 8.2.1 (lot size), 8.2.4 (setbacks, table 8.6) and 8.2.5 (height, table 8.8).</li>
+  <li>Majlis Bandaraya Johor Bahru: <a href="https://www.mbjb.gov.my/sites/default/files/2023-02/GARIS%20PANDUAN%20PERUMAHAN_GP%20PERANCANGAN%20MBJB.pdf" target="_blank" rel="noopener noreferrer">Garis Panduan Perancangan: Perumahan</a>, PR 01 Rumah Sesebuah.</li>
+  <li><a href="https://jkt.kpkt.gov.my/wp-content/d/sites/default/files/2022-10/UKBS%201984%201C.pdf" target="_blank" rel="noopener noreferrer">Uniform Building By-Laws 1984, incorporating amendments up to 2021</a>, by-laws 2, 39, 42 and 44, Local Government Department, KPKT.</li>
+  <li><a href="https://jkt.kpkt.gov.my/wp-content/d/sites/default/files/2019-06/1a.%20Uniform%20Building%20By-Laws%201984-K.GN_.5178_1984.pdf" target="_blank" rel="noopener noreferrer">Uniform Building By-Laws 1984 as gazetted (G.N. 5178/1984)</a>, by-laws 2, 39, 42 and 44, Local Government Department, KPKT.</li>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117)</a>, section 24.</li>
+  <li>Laws of Malaysia: <a href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20133.pdf" target="_blank" rel="noopener noreferrer">Street, Drainage and Building Act 1974 (Act 133)</a>, section 70, Attorney General's Chambers.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. What your lot allows depends on your land title, the local plan and your council's current guideline.</em></p>
+`,
+  },
   {
     id: "pelukis-pelan-vs-architect-malaysia",
     slug: "pelukis-pelan-vs-architect-malaysia",
