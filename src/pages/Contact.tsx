@@ -5,25 +5,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { z } from "zod";
+import { contactSchema, type ContactForm } from "@/lib/contactForm";
 
 import SEO from "@/components/SEO";
 import heroImg from "@/Archive/Projects/courtyard-house_60.jpg";
 import { getContactSchema } from "@/lib/schema";
 import { trackLead } from "@/lib/leadEvents";
 import { lzEnquiry } from "@/lib/lzEnquiry";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100),
-  phone: z.string().trim().min(1, "Contact number is required").max(20),
-  email: z.string().trim().email("Invalid email address").max(255),
-  projectType: z.string().trim().min(1, "Please select a project type"),
-  propertyLocation: z.string().trim().min(1, "Please select a location"),
-  serviceCategory: z.string().trim().min(1, "Please select a category"),
-  submittedAt: z.string().optional(),
-});
-
-type ContactForm = z.infer<typeof contactSchema>;
 
 // List of Malaysian States & Federal Territories
 const MALAYSIA_STATES = [
