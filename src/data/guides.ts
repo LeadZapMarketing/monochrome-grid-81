@@ -268,7 +268,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
     tags: "Authority Submissions",
     image: indahPutraBungalow,
     title: "Building a House on Your Own Land in Malaysia: The Approvals, Step by Step",
-    seoTitle: "Building a House on Your Own Land in Malaysia",
+    seoTitle: "Bina Rumah Atas Tanah Sendiri: The Approvals, Step by Step",
     excerpt:
       "Building on your own land (bina rumah atas tanah sendiri) needs land whose title allows a house, planning permission or an exemption, approved building plans and, at the end, a CCC. This guide explains each approval in order and who handles it.",
     content: `
