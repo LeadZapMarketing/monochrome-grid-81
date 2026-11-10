@@ -175,7 +175,12 @@ async function prerender() {
         .forEach((el) => el.remove());
     });
 
-    const html = await page.content();
+    // Write the stylesheet into the page itself: the styles come with the HTML, so the
+    // page paints without waiting for a second request (vite.config.ts builds one file).
+    const html = (await page.content()).replace(
+      /<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g,
+      (_, href) => `<style>${readFileSync(join(DIST, href)).toString()}</style>`
+    );
 
     // Determine output path
     const outFile = route.endsWith("/")

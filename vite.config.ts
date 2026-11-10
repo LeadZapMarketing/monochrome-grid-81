@@ -2,7 +2,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'; 
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import type { Plugin } from "vite";
 import sharp from "sharp";
@@ -64,8 +63,6 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
-    // 将 CSS 注入 JS：彻底消除那 460ms 的外部 CSS 加载等待时间
-    cssInjectedByJsPlugin(), 
     resizeLargeImages(),
     tileCopies(),
     ViteImageOptimizer({
@@ -96,6 +93,10 @@ export default defineConfig(({ mode }) => ({
     // 32KB 阈值：配合 CSS 内联插件，确保小资源不产生额外请求
     assetsInlineLimit: 32768, 
     cssMinify: true,
+    // One stylesheet: scripts/prerender.mjs writes it into every page's <head>, so the
+    // styles arrive with the HTML (no extra request) and are no longer shipped a second
+    // time inside the main script.
+    cssCodeSplit: false,
     reportCompressedSize: false, // 略微加快构建速度
     rollupOptions: {
       output: {
