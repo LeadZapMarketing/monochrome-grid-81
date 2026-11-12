@@ -87,8 +87,8 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Architect Company in Malaysia | Hidi Lau Architect"
-        description="Hidi Lau Architect is a LAM-registered architect company in Malaysia, established 1989 in Johor Bahru. Architecture, interior design and authority submissions."
+        title="HIDI Lau Architect Services | Architect Company in Malaysia"
+        description="Hidi Lau Architect (Hidilau), a LAM-registered architect in Johor Bahru: architecture, interior design, detail design and authority submissions. WhatsApp us."
         path="/services/"
         breadcrumbs={[{ name: "Services", path: "/services/" }]}
         schema={getServicesSchema()}

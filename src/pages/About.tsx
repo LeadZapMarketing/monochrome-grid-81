@@ -33,8 +33,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
-        title="Top Architect Firm in Malaysia | About Hidi Lau Architect"
-        description="Meet Ar. Hidi Lau Wei Lin, LAM-registered principal of Hidi Lau Architect, an award-winning architecture and interior design firm in Johor Bahru, Malaysia."
+        title="About HIDI Lau Architect | Ar. Hidi Lau Wei Lin, Johor Bahru"
+        description="Meet Ar. Hidi Lau Wei Lin, the LAM-registered architect and PAM corporate member who leads Hidi Lau Architect (Hidilau), architecture and interior design in JB."
         path="/about/"
         breadcrumbs={[{ name: "About", path: "/about/" }]}
         schema={getAboutSchema()} // 2. 这里传入动态生成的 Schema
