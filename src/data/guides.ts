@@ -6,11 +6,122 @@ import indahPutraBungalow from "@/Archive/Projects/2-min.jpg";
 import iconicTerrace from "@/Archive/Projects/81.jpg";
 import suteraTerrace from "@/Archive/Projects/sutera_01-min.jpg";
 import kluangFarmhouse from "@/Archive/Projects/KLUANGRESORTFARMHOUSE/bg_01.jpg";
+import eastMeetsWest from "@/Archive/Projects/emw_01-min.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "architect-fees-malaysia",
+    slug: "architect-fees-malaysia",
+    createdAt: "2026-11-16T00:00:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Architectural Design",
+    image: eastMeetsWest,
+    title: "Architect Fees in Malaysia: How the LAM Minimum Fee Scale Works",
+    seoTitle: "Architect Fees Malaysia: How the Minimum Fee Scale Works",
+    excerpt:
+      "Architect fees in Malaysia follow a legal minimum scale, the Architects (Scale of Minimum Fees) Rules 2010. For an individually designed house or a renovation, the minimum basic fee is 10% of the cost of works up to RM500,000, then a reducing percentage, paid in five stages.",
+    content: `
+<h2>The short answer</h2>
+<p>In Malaysia, what a registered architect charges for the main design and supervision work is set by law as a minimum, not left to a free market:</p>
+<ul>
+  <li><strong>The rule:</strong> the Architects (Scale of Minimum Fees) Rules 2010, made by the Board of Architects Malaysia (<em>Lembaga Arkitek Malaysia</em>, LAM) under the Architects Act 1967. They have applied since 1 March 2010.</li>
+  <li><strong>The basis:</strong> a percentage of the cost of works (what the building costs to build), on a reducing scale: the bigger the project, the lower the percentage.</li>
+  <li><strong>A house:</strong> an individually designed house and renovation works are in the highest category. The minimum basic fee is 10% of the cost of works up to RM500,000.</li>
+  <li><strong>The floor, not the ceiling:</strong> an architect may not charge less than the scale. A higher fee, where justified by the practice's special expertise, experience or standing, is allowed only with the client's prior agreement.</li>
+</ul>
+<p>This guide explains how the scale works so you can read an architect's fee proposal. It is about the law's minimum, not about our own fees.</p>
+
+<h2>What "cost of works" means</h2>
+<p>The fee is a percentage of the cost of works, which the rules define as the total cost of everything designed or allowed for to complete the building to its intended standard. Which figure is used depends on the stage:</p>
+<ul>
+  <li><strong>Before tenders:</strong> the latest cost estimate accepted by the client.</li>
+  <li><strong>After tenders:</strong> the lowest acceptable tender, less the contingency sum.</li>
+  <li><strong>Completed works:</strong> the contract sum, or the final cost including variations.</li>
+</ul>
+<p>It does <strong>not</strong> include the cost of the land, interest during construction, the cost of raising the money, your own administrative costs, or operating equipment that is not an integral part of the building.</p>
+
+<h2>Which category your project is in</h2>
+<p>The rules sort buildings into three categories of complexity, each with its own scale:</p>
+<ul>
+  <li><strong>Category 1, exceptional character and complexity:</strong> includes individually designed houses and renovation works.</li>
+  <li><strong>Category 2, average complexity:</strong> includes housing estates, shop houses, blocks of flats and apartments, and office buildings.</li>
+  <li><strong>Category 3, the simplest utilitarian buildings.</strong></li>
+</ul>
+<p>So a one-off family home designed for your own lot, or a renovation of your house, is category 1.</p>
+
+<h2>The minimum scale for category 1</h2>
+<ul>
+  <li><strong>Up to RM500,000:</strong> 10% of the cost of works.</li>
+  <li><strong>RM500,001 to RM1,000,000:</strong> RM50,000 plus 9.25% of the cost above RM500,000.</li>
+  <li><strong>RM1,000,001 to RM2,000,000:</strong> RM96,250 plus 8.5% of the cost above RM1,000,000.</li>
+  <li><strong>RM2,000,001 to RM4,000,000:</strong> RM181,250 plus 7.75% of the cost above RM2,000,000.</li>
+</ul>
+<p>For comparison, category 2 starts at 7.5% of the cost up to RM500,000, and category 3 at 5% up to RM1,000,000.</p>
+
+<h2>A worked example</h2>
+<p>Take an individually designed house with a cost of works of RM800,000 (category 1):</p>
+<ul>
+  <li>RM50,000 for the first RM500,000;</li>
+  <li>plus 9.25% of the RM300,000 above it, which is RM27,750;</li>
+  <li><strong>minimum basic fee: RM77,750</strong>, about 9.7% of the cost of works.</li>
+</ul>
+<p>The Malaysian Institute of Architects (PAM) publishes a ready reckoner with the same results: RM50,000 at RM500,000, RM77,750 at RM800,000, RM96,250 at RM1 million and RM181,250 at RM2 million.</p>
+<p>This is an example of the legal minimum, not a quote. Your architect's proposal sets out the actual fee for your project.</p>
+
+<h2>What the basic fee covers, and when you pay it</h2>
+<p>The basic fee covers five phases of work. The rules set how much of the total fee is due when each phase is complete:</p>
+<ol>
+  <li><strong>Schematic design (15%):</strong> taking your brief, sketch designs, a first cost estimate and, where needed, the planning submission.</li>
+  <li><strong>Design development (30%):</strong> developing the design so other consultants can start, and the working drawings submitted for building plan approval.</li>
+  <li><strong>Contract documentation (25%):</strong> detailed drawings, tender documents, evaluating the tenders and preparing the building contract.</li>
+  <li><strong>Contract implementation and management (25%):</strong> instructing the contractor, inspecting the works on site and issuing the certificate of practical completion.</li>
+  <li><strong>Final completion (5%):</strong> the Certificate of Completion and Compliance (CCC), as-built drawings, the certificate of making good defects and the final account.</li>
+</ol>
+<p>In the RM800,000 example, that is RM11,662.50, RM23,325, RM19,437.50, RM19,437.50 and RM3,887.50. The architect may also bill monthly or at agreed intervals, so long as the total at the end of each phase matches these shares.</p>
+<p>If an architect is engaged only for the last two phases (taking over a project already designed), the fee for those phases goes up by 30%.</p>
+
+<h2>What is charged on top</h2>
+<ul>
+  <li><strong>Reimbursable expenses:</strong> printing and copying drawings, courier and postage you ask for, travel and accommodation, and advertising tenders. You get one free set of documents at each phase.</li>
+  <li><strong>Other consultants:</strong> the architect advises which other consultants your project needs and coordinates their work. Unless agreed otherwise, you engage and pay them yourself.</li>
+  <li><strong>Supplementary and additional services:</strong> work outside the basic phases. Interior design (a supplementary service) has its own minimum of 10% of its cost of works; landscape design (15%) and project management (3.5%) are additional services with their own minimums.</li>
+  <li><strong>Tax:</strong> any service tax on the architect's services is charged to you.</li>
+</ul>
+
+<h2>If the project stops</h2>
+<p>If a project is abandoned or deferred, the architect is paid in full for the phases completed and a portion for the phase in progress. The architect's fee is also not reduced because a contractor pays you penalties or liquidated damages for delay.</p>
+
+<h2>Agree the fee in writing</h2>
+<p>Under the Architects Rules 1996, an architect may only agree architectural services according to the minimum fee scale, LAM's conditions of engagement and its standard memorandum of agreement, unless the Board allows otherwise. The architect must also get your written agreement to the fee within 60 days of notifying you of it. Ask for the fee, the services and the payment stages in writing before work starts.</p>
+<p>For a small house, a registered Building Draughtsman (<em>pelukis pelan</em>) is an alternative with a different fee basis. Read <a href="/blog/pelukis-pelan-vs-architect-malaysia">Pelukis Pelan or Architect?</a> for which projects each may submit.</p>
+
+<h2>How we work through the phases</h2>
+<p>At HIDI Lau Architect, the early phases follow the process on our <a href="/services/architectural-design/">architectural design service</a> page: site analysis and design feasibility, space planning and layout, a conceptual design direction, floor plans and elevations, refinement from your feedback, materials and facade, functional planning for daily use, and coordination between the design, the structure and the authorities' requirements. Our <a href="/services/authority-submissions/">authority submissions</a> work then carries the plans through council approval, and the final phase ends with the CCC (see <a href="/blog/certificate-of-completion-and-compliance-malaysia">our CCC guide</a>).</p>
+<p>The photo above is <a href="/project/east-meets-west/">The East Meets West</a>, a home in Johor Bahru where we designed the full interior, including the bespoke joinery.</p>
+
+<h2>Questions to ask before you appoint an architect</h2>
+<ul>
+  <li>Is the architect registered with LAM, and is the practice a registered architectural consultancy practice?</li>
+  <li>Which category is my project in, and what cost of works is the fee based on today?</li>
+  <li>Which services are in the basic fee, and which are supplementary or additional (interior design, landscape)?</li>
+  <li>Which other consultants will I need, and who appoints and pays them?</li>
+  <li>When is each payment due, and which expenses are reimbursed on top?</li>
+</ul>
+<p>Planning a <a href="/blog/build-house-on-own-land-malaysia">house on your own land</a> or a <a href="/blog/house-renovation-malaysia">renovation</a>? Those guides set out the approvals step by step.</p>
+
+<h2>Sources</h2>
+<ul>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/LAM%20-%20Architects-Scale%20of%20Minimum%20Fees-Rule%202010.pdf" target="_blank" rel="noopener noreferrer">Architects (Scale of Minimum Fees) Rules 2010, P.U.(A) 53/2010</a>, rules 1, 2, 3, 4, 8 to 12, 23, 24, 25, 27, 29, 30 and the Schedule.</li>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/Architect%20Rules%201996%20-%20Amendment%202022.pdf" target="_blank" rel="noopener noreferrer">Architects Rules 1996, incorporating amendments up to October 2022</a>, rule 29 and the Third Schedule, Part One, paragraphs 2, 4 and 7.</li>
+  <li>Pertubuhan Akitek Malaysia (PAM): <a href="https://www.pam.org.my/images/resources/practice_notes/Ready_Reckoner_fee-prac_notes.pdf" target="_blank" rel="noopener noreferrer">Ready Reckoner for Architects Fee, PAM Practice Notes 2-2020 (October 2020)</a>.</li>
+  <li>Board of Architects Malaysia (LAM): <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117)</a>, sections 4(1)(d) and 35.</li>
+</ul>
+<p><em>This guide is general information about the minimum fee scale, not legal advice or a fee quote. The fee for your project is set out in your architect's written proposal and agreement.</em></p>
+`,
+  },
   {
     id: "bungalow-house-design-malaysia",
     slug: "bungalow-house-design-malaysia",
