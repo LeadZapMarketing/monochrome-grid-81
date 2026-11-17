@@ -126,6 +126,21 @@ const SEARCH_META: Record<string, { title: string; description: string }> = {
     description:
       "Building a house on your own land? See what your land title must allow, when you need planning permission, how plans are approved and when you get the CCC.",
   },
+  "pam-member-in-architect-industry": {
+    title: "PAM Member vs LAM Registered Architect: What It Means",
+    description:
+      "What does PAM membership mean for an architect in Malaysia, how is it different from LAM registration, and why should it matter when you choose one?",
+  },
+  "design-and-build-your-dream-house": {
+    title: "How an Architect Takes Your Building From Concept to Handover",
+    description:
+      "The four stages of an architect-led build in Malaysia: concept and feasibility, drawings and council approval, procurement, then finishes and handover.",
+  },
+  "architecture-in-johor-bahru": {
+    title: "Passive Cooling for Tropical Homes: An Architect in JB",
+    description:
+      "How orientation, cross-ventilation, roof design, wall materials and rainwater planning keep a Johor Bahru home cool, from an architect who designs there.",
+  },
 };
 
 const DEFAULT_NEXT_STEP: NextStep = {
