@@ -75,3 +75,54 @@ Checked by Chief of Staff 2026-10-22: PASS
 - Only the client has it: ✓ The firm's own 8-stage process and its own project photo.
 - Links: ✓ The CCC guide is live (200). Closing links go to the architectural design service and the contact page.
 - Publish date: set to the real publish day, 22 Oct 2026 (22:30 MYT), as the Chief asked.
+
+---
+
+# Update: strengthened 19 Nov 2026 (cycle 34)
+
+- Draft: branch `guide/architect-do-strengthen`, `src/data/guides.ts`, entry `id: "what-does-an-architect-do-malaysia"`. Added lines only: `docs/fact-checks/what-does-an-architect-do-malaysia.update-2026-11-19.diff.txt`.
+- Why: Search Console, 28 days: 325 impressions, 1 click, position 15.1. Queries include "architect" (59, pos 11.8), "architectural consultants" (33, 15.5), "architectural consultancy" (22, 18.7), "architect service" (22, 22.9), "architectural advisory services" (21, 19.4), "chartered architect" (14, 38.3), "architect in malay" (5, 23.4). keyword_volume (Malaysia, 19 Nov): "arkitek" 2,900/mo, "architect in malay" 1,300/mo, "architectural consultants" 50/mo, "architect service" 40/mo. No page on the site targets "arkitek".
+- What changed: a line on the Malay term; a line on "chartered architect" / "architectural consultant" titles; the LAM registration check link; a new section "Architect services and architectural consultancy: what they cover"; three common questions; one new question in the hire checklist; links to the architectural design and authority submissions service pages; two new source lines. Title, meta description, byline, image and the existing text are unchanged. updatedAt set to the update.
+- No prices, offers or client claims added.
+
+## New sources
+- S1 (same file as before, read again 19 Nov via r.jina.ai): Architects Act 1967 (Act 117), s.2 definitions, s.7, s.7A.
+- S3 (same as before): KPKT CCC FAQ, Malay text.
+- S4 LAM, Registration check: https://classic.lam.gov.my/registration-check (page title "Registration Check | Lembaga Arkitek Malaysia"; linked from LAM's registration requirements page as "List of Registered Individuals & Consultancy Practices"; read 17 Nov for the interior guide, approved then).
+- S5 Architects (Scale of Minimum Fees) Rules 2010 (approved for the architect fees guide, 16 Nov).
+
+## New claims
+
+| # | Claim | Source |
+|---|---|---|
+| U1 | LAM's registration check lists registered individuals and consultancy practices | S4 (same claim approved in the interior design guide, 17 Nov) |
+| U2 | In Malay, an architect is an "arkitek"; the Board is Lembaga Arkitek Malaysia (LAM) | S3 Malay text: "PSP terdiri daripada Arkitek, jurutera profesional dan pelukis pelan berdaftar"; S1 / S4 page title "Lembaga Arkitek Malaysia" |
+| U3 | Titles such as "chartered architect" or "architectural consultant" may be seen; in Malaysia the title protected by law is "Architect", for a person registered with LAM | S1 s.7(aa)(i) (only an Architect may use a title bearing the word "Architect"); s.2 "Architect" means a person registered under s.10(2). No claim made about where "chartered" comes from. |
+| U4 | "Architect services", "architectural consultancy" and "architectural consultant" describe the same work; the Act calls it "architectural consultancy services" | S1 s.2: "'architectural consultancy services' means the provision of architectural consultancy advice and services pertaining to all or any of the following" (plain-language framing of search terms) |
+| U5 | The list: submitting plans or drawings to any person or local authority; developing design incl. research and concept; surveys, reports and investigations; feasibility studies and cost estimates; preparing plans and presentations; planning and development services such as interior design, project management, contract administration and landscaping; services to meet statutory requirements | S1 s.2 items (a) "submission of plans or drawings to any person or local authority in Malaysia"; (b) "conceptualization, research and development of any design for the built environment"; (c) "any survey, preparation of reports including environmental impact assessment reports, or investigation relating to the built environment"; (f) "preparation of feasibility studies and cost estimates"; (g) "preparation of plans and other means of presentation"; (e) "planning and development services including interior design, financial advisory services, project management, contract administration and landscaping"; (h) "all services in compliance with statutory requirements". Introduced with "including" (items d and i left out). |
+| U6 | Only a registered Architect may set up an architectural consultancy practice | S1 s.7(a) (already approved claim 3, 22 Oct) |
+| U7 | The practice itself must be registered with LAM and hold a certificate of registration before it can offer these services as a practice | S1 s.7A(1): "An Architect shall not, unless registered as a sole proprietorship, a partnership or a body corporate and has been issued with a certificate of registration— (a) be entitled to set up an architectural consultancy practice to render architectural consultancy services"; s.2 "architectural consultancy practice ... registered by the Board under section 7A or 7B" |
+| U8 | FAQ: a registered architect uses "Ar." | S1 s.7(ba) (approved claim 2) |
+| U9 | FAQ: architectural consultancy services are provided by a registered Architect through a practice registered with LAM; a firm without that registration cannot offer them as an architectural consultancy practice | S1 s.7(a), s.7A(1), s.2 definition of "architectural consultancy practice" |
+| U10 | FAQ: minimum architect fees are set by the Architects (Scale of Minimum Fees) Rules 2010 | S5 (approved, architect fees guide, 16 Nov) |
+| U11 | The design stages are on the architectural design service page; plan submissions are on the authority submissions page | C1: /services/architectural-design/ and /services/authority-submissions/ are live routes (prerender list) |
+
+## Something only the client has
+- Unchanged: the firm's own 8-stage process and its own Horizon Hills project photo; now linked to the firm's own service pages.
+
+## Chief of Staff check (update)
+Checked by Chief of Staff 2026-11-19: PASS
+
+- Draft branch checked: only the old Tip, the "how we run a home project" line, the CCC paragraph and the Act source line were replaced by longer versions. Title, meta description, byline and image unchanged; updatedAt set to 19 Nov. Client-only item untouched, now linked to the firm's own pages.
+- U1 ✓ classic.lam.gov.my/registration-check: "Registration Check | Lembaga Arkitek Malaysia", "List of Registered Individuals & Consultancy Practices".
+- U2 ✓ KPKT CCC FAQ (Malay): "PSP terdiri daripada Arkitek, jurutera profesional dan pelukis pelan berdaftar"; LAM's title "Lembaga Arkitek Malaysia".
+- U3 ✓ Act 117 s.7(aa)(i) (title bearing "Architect" or the equivalent in any other language); s.2 "Architect" = registered under s.10(2).
+- U4 ✓ s.2 definition of "architectural consultancy services".
+- U5 ✓ s.2 items (a), (b), (c), (f), (g), (e), (h) match the seven bullets; "including" covers leaving out (d) and (i).
+- U6 ✓ s.7(a).
+- U7 ✓ s.7A(1); s.2 practice "registered by the Board under section 7A or 7B".
+- U8 ✓ s.7(ba).
+- U9 ✓ follows from s.7(a), s.7A(1) and s.2.
+- U10 ✓ LAM fee rules 2010 PDF live; same claim approved 16 Nov; /blog/architect-fees-malaysia live.
+- U11 ✓ /services/architectural-design/ and /services/authority-submissions/ are real prerendered pages; CCC guide live.
+- New source lines ✓.

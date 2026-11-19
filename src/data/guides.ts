@@ -461,6 +461,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
     id: "what-does-an-architect-do-malaysia",
     slug: "what-does-an-architect-do-malaysia",
     createdAt: "2026-10-22T14:30:00Z",
+    updatedAt: "2026-11-19T00:40:00Z",
     author: "HIDI Lau Architect",
     tags: "Architectural Design",
     image: horizonHills,
@@ -476,10 +477,25 @@ export const LOCAL_GUIDES: BlogPost[] = [
 <h2>Who can call themselves an architect in Malaysia?</h2>
 <p>The title is protected by law. Under section 7 of the Architects Act 1967 (Act 117), only a person registered as an Architect with the Board of Architects Malaysia (Lembaga Arkitek Malaysia, LAM) may describe themselves as an "Architect", use the abbreviation "Ar." before their name, set up an architectural consultancy practice, or recover fees in court for architectural consultancy services.</p>
 <p>To get there, a graduate gains practical experience, passes the LAM-PAM examination, joins the Malaysian Institute of Architects (Pertubuhan Akitek Malaysia, PAM) as a corporate member, and then registers with LAM as an Architect.</p>
-<p><strong>Tip:</strong> look for "Ar." before the name and confirm the registration with LAM before you appoint anyone.</p>
+<p><strong>Tip:</strong> look for "Ar." before the name and confirm the registration with LAM before you appoint anyone. LAM's <a href="https://classic.lam.gov.my/registration-check" target="_blank" rel="noopener noreferrer">registration check</a> lists registered individuals and consultancy practices.</p>
+<p><strong>In Malay:</strong> an architect is an <em>arkitek</em>, and the Board is Lembaga Arkitek Malaysia (LAM). The Ministry of Housing and Local Government's Malay-language CCC FAQ uses the same word.</p>
+<p>You may also see titles such as "chartered architect" or "architectural consultant". In Malaysia, the title protected by law is "Architect", for a person registered with LAM. Whatever title someone uses, check for the LAM registration.</p>
+
+<h2>Architect services and architectural consultancy: what they cover</h2>
+<p>"Architect services", "architectural consultancy" and "architectural consultant" all describe the same work. The Architects Act calls it "architectural consultancy services" and lists what it covers, including:</p>
+<ul>
+  <li>submitting plans or drawings to any person or local authority in Malaysia;</li>
+  <li>developing the design of a building, including research and concept work;</li>
+  <li>surveys, reports and investigations about the site and the built environment;</li>
+  <li>feasibility studies and cost estimates;</li>
+  <li>preparing plans and other drawings or presentations;</li>
+  <li>planning and development services such as interior design, project management, contract administration and landscaping;</li>
+  <li>services to meet the statutory requirements for a building.</li>
+</ul>
+<p>The firm matters as well as the person. Under sections 7 and 7A of the Act, only a registered Architect may set up an architectural consultancy practice, and the practice itself must be registered with LAM and hold a certificate of registration before it can offer these services as a practice. When you compare firms, ask for both registrations.</p>
 
 <h2>What an architect does, stage by stage</h2>
-<p>This is how we run a home project at HIDI Lau Architect. The stages are the ones listed on our architectural design service page.</p>
+<p>This is how we run a home project at HIDI Lau Architect. The stages are the ones listed on our <a href="/services/architectural-design/">architectural design service</a> page.</p>
 <ol>
   <li><strong>Site analysis and design feasibility.</strong> We study the site, its surroundings, sun and wind, and what can be built on it.</li>
   <li><strong>Space planning and layout.</strong> How you live and move through the home decides where each room goes.</li>
@@ -493,7 +509,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
 
 <h2>Approvals and the CCC</h2>
 <p>Before a building can be built, its plans must be approved by the local authority. Under the Architects Act, submitting plans or drawings to a local authority is one of the architectural consultancy services an architect provides, and PAM describes the architect as your agent when submitting drawings for planning and building approvals.</p>
-<p>At the end of the project, the building needs a Certificate of Completion and Compliance (CCC). It is issued by the project's Principal Submitting Person (PSP), not by the council. The PSP can be an architect, a professional engineer or a registered building draughtsman, and the Ministry of Housing and Local Government names the architect as the appropriate PSP for residential and housing projects. Read more in our <a href="/blog/certificate-of-completion-and-compliance-malaysia">guide to the CCC in Malaysia</a>.</p>
+<p>At the end of the project, the building needs a Certificate of Completion and Compliance (CCC). It is issued by the project's Principal Submitting Person (PSP), not by the council. The PSP can be an architect, a professional engineer or a registered building draughtsman, and the Ministry of Housing and Local Government names the architect as the appropriate PSP for residential and housing projects. Read more in our <a href="/blog/certificate-of-completion-and-compliance-malaysia">guide to the CCC in Malaysia</a>, and see how we handle plan submissions on our <a href="/services/authority-submissions/">authority submissions</a> page.</p>
 
 <h2>During construction</h2>
 <p>PAM describes the architect's role during construction as calling for and awarding tenders, administering the building contract, and advising you on your rights and responsibilities towards the contractor, while dealing fairly with both sides. For the CCC, the PSP must supervise the construction and make sure the building follows the approved plans and the council's technical conditions, and is safe and fit to occupy.</p>
@@ -505,9 +521,18 @@ export const LOCAL_GUIDES: BlogPost[] = [
   <li><strong>Interior-only changes:</strong> you may only need an interior designer. See our <a href="/guides/interior-design-malaysia/">guide to interior design in Malaysia</a>.</li>
 </ul>
 
+<h2>Common questions</h2>
+<h3>What is an architect called in Malay?</h3>
+<p>An <em>arkitek</em>. A registered architect uses "Ar." before their name, and registration is with Lembaga Arkitek Malaysia (LAM), the Board of Architects Malaysia.</p>
+<h3>Is an architectural consultant the same as an architect?</h3>
+<p>Only if they are registered. In Malaysia, architectural consultancy services are provided by a registered Architect through a practice registered with LAM. A firm without that registration cannot offer them as an architectural consultancy practice.</p>
+<h3>How is an architect's fee worked out?</h3>
+<p>The minimum fees are set by the Architects (Scale of Minimum Fees) Rules 2010. Our <a href="/blog/architect-fees-malaysia">guide to architect fees in Malaysia</a> explains how they work and what to agree in writing.</p>
+
 <h2>Questions to ask before you appoint an architect</h2>
 <ul>
   <li>Are you registered with LAM as an Architect? Under what name?</li>
+  <li>Is your practice registered with LAM as an architectural consultancy practice?</li>
   <li>Which of the stages above are included in your service?</li>
   <li>Will you act as the Principal Submitting Person and certify the CCC?</li>
   <li>Can I see completed homes similar to mine?</li>
@@ -515,9 +540,10 @@ export const LOCAL_GUIDES: BlogPost[] = [
 
 <h2>Sources</h2>
 <ul>
-  <li>Laws of Malaysia: <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117)</a>, section 2 (definition of "architectural consultancy services") and section 7 (restrictions on unregistered persons), incorporating amendments up to February 2015, published by LAM.</li>
+  <li>Laws of Malaysia: <a href="https://www.lam.gov.my/my-assets/docs/actRules/architects_act_1967_incorparating_amendments_up_to_february_2015.pdf_-_final.pdf" target="_blank" rel="noopener noreferrer">Architects Act 1967 (Act 117)</a>, section 2 (definitions of "architectural consultancy services" and "architectural consultancy practice"), section 7 (restrictions on unregistered persons) and section 7A (registration of architectural consultancy practices), incorporating amendments up to February 2015, published by LAM.</li>
   <li>Pertubuhan Akitek Malaysia (PAM): <a href="https://pam.org.my/42-resources/284-architectural-services.html" target="_blank" rel="noopener noreferrer">Architectural Services: process of obtaining an architect</a>.</li>
   <li>Local Government Department, Ministry of Housing and Local Government (KPKT): <a href="https://jkt.kpkt.gov.my/about-lgd/faqs/certificate-of-completion-and-compliance-ccc-faq" target="_blank" rel="noopener noreferrer">Certificate of Completion and Compliance (CCC) FAQ</a>.</li>
+  <li>Lembaga Arkitek Malaysia: <a href="https://classic.lam.gov.my/registration-check" target="_blank" rel="noopener noreferrer">Registration check</a> (registered individuals and consultancy practices).</li>
 </ul>
 <p><em>This guide is general information, not legal advice. What a specific project needs depends on its approvals and the local authority.</em></p>
 `,
