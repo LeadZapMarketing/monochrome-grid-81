@@ -122,7 +122,7 @@ const SEARCH_META: Record<string, { title: string; description: string }> = {
       "Need council approval to renovate your house? See what counts as minor renovation, when an architect must submit plans, and how MBJB handles permits in JB.",
   },
   "build-house-on-own-land-malaysia": {
-    title: "Bina Rumah Atas Tanah Sendiri: The Approvals, Step by Step",
+    title: "Building a House on Your Own Land in Malaysia",
     description:
       "Building a house on your own land? See what your land title must allow, when you need planning permission, how plans are approved and when you get the CCC.",
   },
