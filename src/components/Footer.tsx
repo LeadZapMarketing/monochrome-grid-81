@@ -10,7 +10,7 @@ const Footer = () => {
 
       {/* Main footer content */}
       <div className="bg-background py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 items-start">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 items-start">
           {/* Logo / Brand */}
           <div className="flex flex-col items-center md:items-start">
             <img
@@ -54,6 +54,35 @@ const Footer = () => {
               <li>
                 <Link to="/contact/" className="hover:text-foreground transition-colors">
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="flex flex-col">
+            <h3 className="font-futura font-bold text-sm md:text-base text-foreground mb-4">
+              Services
+            </h3>
+            <ul className="space-y-2 font-futura text-sm md:text-base text-foreground/80">
+              <li>
+                <Link to="/services/architectural-design/" className="hover:text-foreground transition-colors">
+                  Architectural Design
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/interior-design/" className="hover:text-foreground transition-colors">
+                  Interior Design
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/authority-submissions/" className="hover:text-foreground transition-colors">
+                  Authority Submissions
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/craftsmanship/" className="hover:text-foreground transition-colors">
+                  Detail Design &amp; Craftsmanship
                 </Link>
               </li>
             </ul>

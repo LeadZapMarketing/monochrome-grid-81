@@ -31,7 +31,7 @@ const PassionateCraftsmanship = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <SEO
         title="Detail Design & Craftsmanship | Hidi Lau Architect"
-        description="Our passionate craftsmanship approach reflects our commitment to quality, precision, and thoughtful execution across every project."
+        description="How Hidi Lau Architect in Johor Bahru carries a design from drawing to site: details, materials, finishes and site coordination, seen in our own homes."
         path="/services/craftsmanship/"
         breadcrumbs={[
           { name: "Services", path: "/services/" },
@@ -71,7 +71,7 @@ const PassionateCraftsmanship = () => {
           <img
             src={heroImg}
             {...heroImageProps(heroImg, 1920, 1440)}
-            alt="Passionate Craftsmanship"
+            alt="Timber-panelled hallway of The East Meets West home in Johor Bahru, designed by Hidi Lau Architect"
             className="w-full h-full object-cover"
             style={{ filter: "brightness(0.48)" }}
           />
@@ -160,6 +160,27 @@ const PassionateCraftsmanship = () => {
               only visually pleasing but also carefully resolved, comfortable to
               use, and meaningful to the people who occupy them.
             </p>
+
+            <p className="text-[11px] md:text-[12px] lg:text-[13px] font-futura font-light tracking-[0.08em] md:tracking-[0.1em] leading-[1.85] md:leading-[1.9] text-muted-foreground">
+              See it in our own work in Johor Bahru: the bespoke joinery and
+              warm timber of{" "}
+              <Link to="/project/east-meets-west/" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                The East Meets West
+              </Link>
+              , and the light-filled central courtyard of{" "}
+              <Link to="/project/courtyard-house/" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                The Courtyard House
+              </Link>
+              . We carry the same care through{" "}
+              <Link to="/services/architectural-design/" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                architectural design
+              </Link>{" "}
+              and{" "}
+              <Link to="/services/interior-design/" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                interior design
+              </Link>
+              .
+            </p>
           </div>
 
           {/* Right: approach list */}
@@ -185,11 +206,11 @@ const PassionateCraftsmanship = () => {
 
         {/* ── Image pair ─────────────────────────────────────────── */}
         <div className="grid grid-cols-1 md:grid-cols-2 border-b border-border">
-          <div className="overflow-hidden aspect-[4/3]">
-            <img src={img2} alt="Craftsmanship project" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-[1.03] transition-all duration-700" />
-          </div>
+          <Link to="/project/courtyard-house/" className="block overflow-hidden aspect-[4/3]">
+            <img src={img2} alt="The Courtyard House in Johor Bahru, designed by Hidi Lau Architect" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-[1.03] transition-all duration-700" />
+          </Link>
           <div className="overflow-hidden aspect-[4/3] border-t md:border-t-0 md:border-l border-border">
-            <img src={img3} alt="Craftsmanship detail" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-[1.03] transition-all duration-700" />
+            <img src={img3} alt="Interior finishes and joinery detail by Hidi Lau Architect" className="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 hover:scale-[1.03] transition-all duration-700" />
           </div>
         </div>
 
