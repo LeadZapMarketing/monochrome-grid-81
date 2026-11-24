@@ -78,6 +78,13 @@ const NEXT_STEPS: Record<string, NextStep> = {
       { to: "/contact/", label: "tell us about your project" },
     ],
   },
+  "house-extension-malaysia": {
+    lead: "Planning an extension to your terrace or semi-D and want the design, the drawings and the council submission handled by a registered architect? See our",
+    links: [
+      { to: "/services/authority-submissions/", label: "authority submissions service" },
+      { to: "/contact/", label: "tell us about your extension" },
+    ],
+  },
   "house-renovation-malaysia": {
     lead: "Planning an extension or a structural renovation and want the drawings and council submissions handled by a registered architect? See our",
     links: [

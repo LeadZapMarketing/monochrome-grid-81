@@ -7,11 +7,105 @@ import iconicTerrace from "@/Archive/Projects/81.jpg";
 import suteraTerrace from "@/Archive/Projects/sutera_01-min.jpg";
 import kluangFarmhouse from "@/Archive/Projects/KLUANGRESORTFARMHOUSE/bg_01.jpg";
 import eastMeetsWest from "@/Archive/Projects/emw_01-min.jpg";
+import iconicTerraceKitchen from "@/Archive/Projects/71.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
 // Legal and regulatory facts must match the sources listed at the end of each guide.
 export const LOCAL_GUIDES: BlogPost[] = [
+  {
+    id: "house-extension-malaysia",
+    slug: "house-extension-malaysia",
+    createdAt: "2026-11-24T04:40:00Z",
+    author: "HIDI Lau Architect",
+    tags: "Authority Submissions",
+    image: iconicTerraceKitchen,
+    title: "House Extension in Malaysia: Approvals, Setbacks and Your Neighbours",
+    seoTitle: "House Extension Malaysia: Approvals, Setbacks, Neighbours",
+    excerpt:
+      "Extending a terrace or semi-D house in Malaysia needs the council's approval first. What counts as an extension, setbacks, your neighbour's consent and the CCC.",
+    content: `
+<h2>The short answer</h2>
+<p>A house extension in Malaysia (<em>extension rumah</em>, or <em>ubah tambah</em> and <em>sambungan</em> in council forms) needs your local council's approval before work starts. In law, adding floor space or a new roof to an existing house counts as erecting a building, so the council must give written permission first. For a terrace, semi-detached or cluster house, expect the council to ask for:</p>
+<ul>
+  <li>drawings that show what is new and what is demolished, prepared by an architect, engineer or registered draughtsman;</li>
+  <li>the setbacks your extension keeps from the road and the lot boundary;</li>
+  <li>your neighbour's consent where the work touches a shared wall or structure;</li>
+  <li>a registered engineer's drawings and calculations for new concrete floors or structural changes.</li>
+</ul>
+<p>This guide covers extensions to landed houses in Peninsular Malaysia, with Johor Bahru as the example. If your work is smaller, such as new finishes, doors or tiles, read our <a href="/blog/house-renovation-malaysia">guide to renovation permits</a> instead.</p>
+
+<h2>Why an extension needs approval</h2>
+<p>Under section 70(1) of the Street, Drainage and Building Act 1974 (Act 133), no one may erect a building without the local authority's prior written permission. Section 70(16) treats anyone who adds to or alters an existing building in a way that involves new foundations, or a new, partly new or bigger structure or roof on existing walls or foundations, as erecting a building. That is what most extensions do.</p>
+<p>Councils draw the same line. Majlis Daerah Sabak Bernam's renovation guide, for example, puts an extension adding more than 6.5 square metres, a new loft or mezzanine floor, and building or rebuilding a roof in its highest category: approved plans through the council's One Stop Centre (OSC), and a Certificate of Completion and Compliance (CCC) at the end.</p>
+
+<h2>The common extensions, and what each one needs</h2>
+<ul>
+  <li><strong>A rear or kitchen extension on the ground floor.</strong> The most common one. Johor councils publish ready-made sketch plans for simple ground-floor extensions: Majlis Bandaraya Pasir Gudang's cover front, rear and side extensions on the ground floor only, for terrace, cluster, semi-detached and detached houses. Anything the sketch plans do not show, including a reinforced concrete roof, must be submitted separately by a qualified person such as an architect, civil engineer or registered draughtsman.</li>
+  <li><strong>A side extension on a corner or semi-detached lot.</strong> Here the setbacks to the side road reserve or the lot boundary decide how far you can build (see the next section).</li>
+  <li><strong>An upper-floor extension or balcony.</strong> Pasir Gudang asks for design drawings and calculations for an upper-floor extension, including balconies. Johor Bahru asks for reinforced concrete plans and calculations certified by a registered engineer for a new reinforced concrete floor slab (its guide sets a 1.5-metre threshold), or for breaking into a reinforced concrete wall.</li>
+  <li><strong>An extra storey on a terrace house.</strong> This can raise planning questions as well as building ones. Subang Jaya's council guideline allows extra storeys on terrace houses but asks for the planning permission and building plan applications to be submitted together, and Majlis Bandaraya Petaling Jaya notes that where work raises planning issues, planning permission (<em>kebenaran merancang</em>) must be approved first.</li>
+</ul>
+<p>Some councils also limit what an extended space may become. Perbadanan Putrajaya, for example, does not allow a roofed dry yard to be enclosed and turned into a wet kitchen.</p>
+
+<h2>Setbacks: how far you can build</h2>
+<p>A setback (<em>anjakan bangunan</em>) is the distance a building must keep from the road reserve or the lot boundary. Each council sets its own numbers, and they can differ by house type and street, so ask your council or your architect before you design.</p>
+<p>Majlis Bandaraya Johor Bahru's guide to minor additions (<em>Kerja-kerja Kecil Rumah Kediaman</em>) asks every drawing to show the building setback and the roof overhang. Its sketch plans show:</p>
+<ul>
+  <li>6.0 metres from the front road reserve for walls;</li>
+  <li>2.5 metres for a porch or terrace;</li>
+  <li>2.5 metres from the side road reserve on a corner lot;</li>
+  <li>on some house types, 2.0 metres from the lot boundary for the roof overhang.</li>
+</ul>
+<p>Other councils use other numbers. Subang Jaya's guideline, for example, allows a front balcony up to a line 10 feet from the front lot boundary, and an upper-floor rear extension up to the rear lot boundary.</p>
+
+<h2>Your neighbour and the party wall</h2>
+<p>On a terrace, semi-detached or cluster house you share a wall, and often a structure, with your neighbour. Johor Bahru asks for your neighbour's acknowledgement, with a copy of their assessment receipt, when the work involves a shared structure, and its guide says that walls, fences and dividing walls must not take in or involve the neighbour's lot without their written permission. Putrajaya and Sabak Bernam also ask for a neighbour's letter for work next to their house.</p>
+<p>Talk to your neighbour early. Their consent is part of the application, and the shared wall often decides how the new structure is built.</p>
+
+<h2>What the drawings show</h2>
+<p>Johor Bahru's guide lists what an extension drawing must show:</p>
+<ul>
+  <li>a site plan with three surrounding road names, the lot and building numbers of your lot and the next lot, and the north point;</li>
+  <li>floor plans and sections with the setbacks, the proposed roof overhang, each room's name and use, and the floor area of each added space;</li>
+  <li>a table of existing and added floor area;</li>
+  <li>new work coloured red, and anything to be demolished in yellow dashed lines.</li>
+</ul>
+<p>Both Johor Bahru and Pasir Gudang say that the owner is fully responsible for the stability and strength of what is built, and that an approval or permit lasts one year: if it runs out before you build, you apply again under the same council reference. Johor Bahru also reminds owners that other bodies, such as the fire and rescue department, the water company, TNB or Indah Water, may need to give written permission where the work affects them.</p>
+
+<h2>When the work is finished: the CCC</h2>
+<p>For an extension built under approved plans, the principal submitting person (an architect, a professional engineer or a registered building draughtsman) supervises the work and issues the CCC at the end. The CCC is issued by the principal submitting person, not by the council. Read more in our <a href="/blog/certificate-of-completion-and-compliance-malaysia">guide to the CCC in Malaysia</a>.</p>
+
+<h2>If you extend without approval</h2>
+<p>Under section 70(11) of Act 133, altering a building without the local authority's prior written permission is an offence with a fine of up to RM25,000, and on the council's application a Magistrate's Court will order the building to be altered or demolished. Where plans are submitted after work has started, section 70(14) allows a payment of five to twenty times the normal fees, as Pasir Gudang's guide also reminds owners.</p>
+
+<h2>How we plan an extension</h2>
+<p>HIDI Lau Architect takes on structural renovations and architectural additions for landed homes, including bungalows, semi-detached homes and link houses. On an extension, our <a href="/services/architectural-design/">architectural design</a> work starts with site analysis and design feasibility, then space planning, floor plans and elevations, and coordination between the design, the structure and the authority requirements. Our <a href="/services/authority-submissions/">authority submissions</a> work runs alongside: preparing the submission drawings, coordinating the other consultants the submission needs, liaising with the council where required, and follow-up and revisions when they are needed.</p>
+<p>The kitchen pictured above is from <a href="/project/iconic-terrace/">The Iconic Terrace</a>, a terrace house in Johor Bahru transformed into a distinctive modern home, with its architecture, facade and interior designed by our studio.</p>
+
+<h2>Questions to settle before you extend</h2>
+<ul>
+  <li>Does the extension add floor area, a new roof, or a new concrete floor or wall?</li>
+  <li>What setbacks apply to my lot, and how much room do they leave?</li>
+  <li>Does the work touch the wall or structure I share with my neighbour, and will they sign?</li>
+  <li>Does my council have ready-made sketch plans for this extension, or does it need full plans?</li>
+  <li>Who will prepare and sign the drawings, and who will issue the CCC?</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li>Laws of Malaysia: <a href="https://lom.agc.gov.my/ilims/upload/portal/akta/LOM/EN/Act%20133.pdf" target="_blank" rel="noopener noreferrer">Street, Drainage and Building Act 1974 (Act 133)</a>, sections 1, 3 and 70, Attorney General's Chambers. Section 70 is also published by the <a href="https://www.hba.org.my/laws/street/partV.htm" target="_blank" rel="noopener noreferrer">National House Buyers Association (HBA)</a>.</li>
+  <li>Majlis Bandaraya Johor Bahru: <a href="https://www.mbjb.gov.my/sites/default/files/2023-01/Garispanduan%20UBT%20kecil.pdf" target="_blank" rel="noopener noreferrer">Kerja-kerja Kecil Rumah Kediaman, Permohonan Kelulusan Ubahan Tambahan</a> (updated 2016).</li>
+  <li>Majlis Bandaraya Pasir Gudang: <a href="https://www.mbpg.gov.my/sites/default/files/garis_panduan_ut_rev2.pdf" target="_blank" rel="noopener noreferrer">Garis Panduan Ubah Tambah Rumah Kediaman</a>.</li>
+  <li>Majlis Perbandaran Subang Jaya: <a href="https://www.mbsj.gov.my/sites/default/files/Pindaan%20Garis%20Panduan%20Tambahan%20Dan%20Ubahsuaian%20Rumah%20Kediaman%20Sedia%20Ada%20Di%20Kawasan%20Pentadbiran%20MPSJ.pdf" target="_blank" rel="noopener noreferrer">Pindaan Garis Panduan Tambahan dan Ubahsuaian Rumah Kediaman Sedia Ada</a>.</li>
+  <li>Majlis Bandaraya Petaling Jaya: <a href="https://www.mbpj.gov.my/en/node/1344" target="_blank" rel="noopener noreferrer">Building Control Department FAQ</a>.</li>
+  <li>Majlis Daerah Sabak Bernam: <a href="https://www.mdsb.gov.my/images/panduan-ubah-suai-bangunan-mdsb/buku_ubah_suai_bangunan_mdsb_.pdf" target="_blank" rel="noopener noreferrer">Panduan Ubah Suai Bangunan</a>.</li>
+  <li>Perbadanan Putrajaya: <a href="https://www.ppj.gov.my/storage/prosedur/164/164.pdf" target="_blank" rel="noopener noreferrer">Garis Panduan Kerja-Kerja Kecil dan Ubahsuai Bangunan Kediaman</a>.</li>
+  <li>Local Government Department, KPKT: <a href="https://jkt.kpkt.gov.my/about-lgd/faqs/certificate-of-completion-and-compliance-ccc-faq" target="_blank" rel="noopener noreferrer">Certificate of Completion and Compliance (CCC) FAQ</a>.</li>
+</ul>
+<p><em>This guide is general information, not legal advice. What your extension needs depends on your house, your lot and your council's current rules.</em></p>
+`,
+  },
   {
     id: "architect-fees-malaysia",
     slug: "architect-fees-malaysia",

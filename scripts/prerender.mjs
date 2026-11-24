@@ -44,6 +44,7 @@ const routes = [
   "/blog/pelukis-pelan-vs-architect-malaysia",
   "/blog/bungalow-house-design-malaysia",
   "/blog/architect-fees-malaysia",
+  "/blog/house-extension-malaysia",
   // Guides with their own address (a folder, like the service pages)
   "/guides/interior-design-malaysia/",
 ];
