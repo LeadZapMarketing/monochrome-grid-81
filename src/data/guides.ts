@@ -7,7 +7,7 @@ import iconicTerrace from "@/Archive/Projects/81.jpg";
 import suteraTerrace from "@/Archive/Projects/sutera_01-min.jpg";
 import kluangFarmhouse from "@/Archive/Projects/KLUANGRESORTFARMHOUSE/bg_01.jpg";
 import eastMeetsWest from "@/Archive/Projects/emw_01-min.jpg";
-import iconicTerraceKitchen from "@/Archive/Projects/71.jpg";
+import iconicTerraceBedroom from "@/Archive/Projects/71.jpg";
 
 // Journal guides that live in the repo instead of Supabase. They render instantly
 // (no fetch), so the prerendered page carries the full article.
@@ -19,7 +19,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
     createdAt: "2026-11-24T04:40:00Z",
     author: "HIDI Lau Architect",
     tags: "Authority Submissions",
-    image: iconicTerraceKitchen,
+    image: iconicTerraceBedroom,
     title: "House Extension in Malaysia: Approvals, Setbacks and Your Neighbours",
     seoTitle: "House Extension Malaysia: Approvals, Setbacks, Neighbours",
     excerpt:
@@ -81,7 +81,7 @@ export const LOCAL_GUIDES: BlogPost[] = [
 
 <h2>How we plan an extension</h2>
 <p>HIDI Lau Architect takes on structural renovations and architectural additions for landed homes, including bungalows, semi-detached homes and link houses. On an extension, our <a href="/services/architectural-design/">architectural design</a> work starts with site analysis and design feasibility, then space planning, floor plans and elevations, and coordination between the design, the structure and the authority requirements. Our <a href="/services/authority-submissions/">authority submissions</a> work runs alongside: preparing the submission drawings, coordinating the other consultants the submission needs, liaising with the council where required, and follow-up and revisions when they are needed.</p>
-<p>The kitchen pictured above is from <a href="/project/iconic-terrace/">The Iconic Terrace</a>, a terrace house in Johor Bahru transformed into a distinctive modern home, with its architecture, facade and interior designed by our studio.</p>
+<p>The bedroom pictured above is from <a href="/project/iconic-terrace/">The Iconic Terrace</a>, a terrace house in Johor Bahru transformed into a distinctive modern home, with its architecture, facade and interior designed by our studio.</p>
 
 <h2>Questions to settle before you extend</h2>
 <ul>

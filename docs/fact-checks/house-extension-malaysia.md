@@ -16,7 +16,7 @@
 - S8 Perbadanan Putrajaya, Garis Panduan Kerja-Kerja Kecil dan Ubahsuai Bangunan Kediaman (37 pp): https://www.ppj.gov.my/storage/prosedur/164/164.pdf (approved 31 Oct)
 - S9 JKT/KPKT CCC FAQ: https://jkt.kpkt.gov.my/about-lgd/faqs/certificate-of-completion-and-compliance-ccc-faq
 - S10 Approved renovation guide fact-check (docs/fact-checks/house-renovation-malaysia.md, PASS 31 Oct 2026), claims cited by number below as R#.
-- C1 Client's own site: src/components/FAQSection.tsx (renovation answer); src/pages/services/ArchitecturalDesign.tsx and src/pages/services/AuthoritySubmissions.tsx (processItems); src/data/projects.ts (id "iconic-terrace", image 71.jpg = it10, the kitchen render).
+- C1 Client's own site: src/components/FAQSection.tsx (renovation answer); src/pages/services/ArchitecturalDesign.tsx and src/pages/services/AuthoritySubmissions.tsx (processItems); src/data/projects.ts (id "iconic-terrace", image 71.jpg = it10, the bedroom render).
 
 ## Claims
 | # | Claim in the guide | Sources and what they say |
@@ -52,7 +52,7 @@
 | 29 | HIDI Lau Architect does structural renovations and architectural additions for landed homes, incl. bungalows, semi-D and link houses | C1 FAQSection: "We specialize in comprehensive structural renovations, architectural additions, and interior transformations for luxury landed residential properties, including custom bungalows, semi-detached homes, and link houses." (R26) |
 | 30 | Architectural design work: site analysis and design feasibility, space planning, floor plans and elevations, coordination between design, structure and authority requirements | C1 ArchitecturalDesign processItems: "Site analysis and design feasibility", "Space planning and layout development", "Floor plans and elevations", "Coordination between design, structure, and authority requirements" |
 | 31 | Authority submissions: submission drawings, coordinating consultants, liaising with the council, follow-up and revisions | C1 AuthoritySubmissions processItems (R28) |
-| 32 | The kitchen pictured is from The Iconic Terrace, a Johor Bahru terrace house transformed into a distinctive modern home; architecture, facade and interior by the studio | C1 projects.ts "iconic-terrace": images include 71.jpg (it10, the kitchen); location "Johor Bahru, Malaysia"; description "A terrace house transformed through bold architectural intervention into a distinctive modern home"; scope "Architecture, Facade Design, Interior Design" (R27). The guide does NOT say the project was an extension |
+| 32 | The bedroom pictured is from The Iconic Terrace, a Johor Bahru terrace house transformed into a distinctive modern home; architecture, facade and interior by the studio | C1 projects.ts "iconic-terrace": images include 71.jpg (it10, a bedroom); location "Johor Bahru, Malaysia"; description "A terrace house transformed through bold architectural intervention into a distinctive modern home"; scope "Architecture, Facade Design, Interior Design" (R27). The guide does NOT say the project was an extension |
 
 ## Page metadata
 - Title tag (seoTitle): "House Extension Malaysia: Approvals, Setbacks, Neighbours" (57 chars). H1: "House Extension in Malaysia: Approvals, Setbacks and Your Neighbours".
@@ -62,7 +62,7 @@
 - Ends with the closing links (Authority Submissions service, contact) and the WhatsApp button (all local guides). Links in the body: renovation guide, CCC guide, Architectural Design, Authority Submissions, The Iconic Terrace.
 
 ## Only the client has
-- The firm's own terrace project photo (The Iconic Terrace kitchen, Johor Bahru) and its own design and submissions process for extensions (C1).
+- The firm's own terrace project photo (The Iconic Terrace bedroom, Johor Bahru) and its own design and submissions process for extensions (C1).
 
 ## No prices, offers or fee claims
 - No extension cost, fee amount or processing time. Money figures are statutory only (#27 RM25,000 maximum fine, #28 fee multiple). MBPG's council fees and deposits (RM130–RM1,000) and its "60 hari" processing time are left out on purpose.
@@ -98,3 +98,6 @@ Checked by Chief of Staff 2026-11-24: PASS
 24. ✓ MBJB 1.2 (permit "tempoh setahun", reapply "no. rujukan Majlis yang sama"); MBPG 1.0 same for "Kelulusan Pelan".
 25. ✓ MBJB 1.4: Jabatan Bomba dan Penyelamat, Syarikat Air Johor, Tenaga Nasional Berhad, Indah Water.
 26–32. ✓ Covered by the Chief's verdict line above ("All 32 claims hold"); the reply as relayed to this session was cut off after claim 25.
+
+## Correction after publish (24 Nov 2026)
+- Claim 32: the live check showed the photo (71.jpg) is a bedroom render, not a kitchen. The caption now says "The bedroom pictured above". The project facts in the claim are unchanged.
