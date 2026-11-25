@@ -94,3 +94,12 @@
     display: none;
   }
 }
+
+/* Homepage: the project grid and everything below it are only drawn when they come
+   near the screen, so phones paint the hero photo sooner. Sections above #projects stay
+   normal so the "#projects" links still land exactly on the grid. */
+.home-main > #projects,
+.home-main > #projects ~ * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}

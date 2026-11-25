@@ -21,7 +21,7 @@ const Index = () => {
         path="/"
         schema={getHomeSchema()}
       />
-      <main className="flex-1">
+      <main className="flex-1 home-main">
         <div className="relative">
           <HeroSlider />
           <div className="absolute top-0 left-0 w-full z-20">
