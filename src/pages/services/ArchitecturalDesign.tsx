@@ -145,6 +145,17 @@ const ArchitecturalDesign = () => {
               but to create a space that feels right, functions smoothly, and
               continues to serve its users for years to come.
             </p>
+
+            <p className="text-[11px] md:text-[12px] lg:text-[13px] font-futura font-light tracking-[0.08em] md:tracking-[0.1em] leading-[1.85] md:leading-[1.9] text-muted-foreground">
+              In Malaysia, the minimum fees for an architect's services are set
+              by the Architects (Scale of Minimum Fees) Rules 2010, and the fee
+              and what it covers should be agreed in writing before work starts.
+              Our guide to{" "}
+              <Link to="/blog/architect-fees-malaysia" className="underline underline-offset-4 hover:text-foreground">
+                architect fees in Malaysia
+              </Link>{" "}
+              explains how the fee scale works.
+            </p>
           </div>
 
           {/* Right: process list */}
