@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo3.png";
+// The logo is its own small file (cached once) instead of being copied into every page.
+const logo = "/images/logo3.webp";
 
 interface HeaderProps {
   transparent?: boolean;
@@ -36,6 +37,8 @@ const Header = ({ transparent = false }: HeaderProps) => {
           <span className="inline-flex shrink-0 items-center justify-center  px-3 py-2.5 md:px-4 md:py-3">
             <img
               src={logo}
+              width={190}
+              height={292}
               alt="HIDI LAU ARCHITECT"
               className="h-11 md:h-14 w-auto object-contain"
             />
@@ -89,7 +92,7 @@ const Header = ({ transparent = false }: HeaderProps) => {
           {/* 顶部栏：保持整洁 */}
           <div className="flex items-center justify-between px-6 py-5 bg-white border-b border-[#e0e0e0]">
             <Link to="/" className="flex items-center gap-3" onClick={() => setMobileOpen(false)}>
-              <img src={logo} alt="Logo" className="h-9 w-auto" />
+              <img src={logo} width={190} height={292} alt="Logo" className="h-9 w-auto" />
             </Link>
             <button onClick={() => setMobileOpen(false)} className="text-black p-1">
               <X size={24} strokeWidth={1.5} />

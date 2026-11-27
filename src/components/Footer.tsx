@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo3.png";
 import { trackLead } from "@/lib/leadEvents";
+
+// The logo is its own small file (cached once) instead of being copied into every page.
+const logo = "/images/logo3.webp";
 
 const Footer = () => {
   return (
@@ -15,6 +17,8 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <img
               src={logo}
+              width={190}
+              height={292}
               alt="Hidi Lau Architect logo"
               className="h-20 md:h-24 w-auto object-contain"
               loading="lazy"
