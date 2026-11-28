@@ -4,17 +4,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import ProjectDetail from "./pages/ProjectDetail";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
 const WhatsAppChatWidget = lazy(() => import("./components/WhatsAppChatWidget"));
-import ArchitecturalDesign from "./pages/services/ArchitecturalDesign";
-import InteriorDesign from "./pages/services/InteriorDesign";
-import AuthoritySubmissions from "./pages/services/AuthoritySubmissions";
-import PassionateCraftsmanship from "./pages/services/Craftsmanship";
-import { BlogPost, BlogDetail } from "./journalRoutes";
+import {
+  About,
+  Services,
+  ProjectDetail,
+  Contact,
+  NotFound,
+  ArchitecturalDesign,
+  InteriorDesign,
+  AuthoritySubmissions,
+  PassionateCraftsmanship,
+  BlogPost,
+  BlogDetail,
+} from "./pageRoutes";
 
 
 

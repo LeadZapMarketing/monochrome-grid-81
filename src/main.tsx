@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
-import { preloadJournalRoute } from "./journalRoutes";
+import { preloadRoute } from "./pageRoutes";
 import "./index.css";
 
 const render = () => createRoot(document.getElementById("root")!).render(<App />);
@@ -20,4 +20,4 @@ const heroPainted = (): Promise<void> => {
   return Promise.race([painted, new Promise<void>((done) => setTimeout(done, 3000))]);
 };
 
-Promise.all([preloadJournalRoute(window.location.pathname), heroPainted()]).then(render, render);
+Promise.all([preloadRoute(window.location.pathname), heroPainted()]).then(render, render);
